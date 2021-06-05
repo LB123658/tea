@@ -135,13 +135,54 @@ padding: 5px;
 visibility: hidden;
 z-index: 10;
 }
-#main {
+#homediv {
 position: absolute;
 top: 90px;
 left: 0px;
 width: 100%;
 height: 100%;
 z-index: -1;
+}
+#teasdiv {
+position: absolute;
+top: 90px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -1;
+visibility: hidden;
+}
+#moneydiv {
+position: absolute;
+top: 90px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -1;
+visibility: hidden;
+}
+#accountdiv {
+position: absolute;
+top: 90px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -1;
+visibility: hidden;
+}
+#settingsdiv {
+position: absolute;
+top: 90px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -1;
+visibility: hidden;
+}
+.preloadtext {
+margin-left: 120px;
+font-size: 25px;
+margin-right: 50px;
 }
 @media screen and (max-width: 515px) {
   #p {
@@ -172,9 +213,27 @@ z-index: -1;
 <p id="brewbanner">Brew some tea</p>
 
 <!-- main area of game where this happen -->
-<div id="main">
-
+<div id="homediv">
+<p class="preloadtext">Welcome to your TeaBag homescreen! <br><br> Sorry, TeaBag is currently not available yet. Check back in the next few days.</p>
 </div>
+
+<div id="teasdiv">
+<p class="preloadtext">TeaBag is not available yet so none of your tea has loaded.</p>
+</div>
+
+<div id="moneydiv">
+<p class="preloadtext">You have $0.00 right now.</p>
+</div>
+
+<div id="accountdiv">
+<p class="preloadtext" id="accountInfo"></p>
+</div>
+
+<div id="settingsdiv">
+<p class="preloadtext">Language: English (only option)<br><br>JavaScript and localStorage must be allowed because they save your progress and account info.<br><br> TeaBag never tracks you and your info is only stored on your computer.</p>
+</div>
+
+
 <noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
 
 <script>
@@ -215,6 +274,9 @@ brewbanner.style.visibility = "visible";
 function brewUnhover() {
 brewbanner.style.visibility = "hidden";
 }
+
+//load account info page 
+document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + ". <br><br> TeaBag is not available yet. Please check back in a few days and then you will be able customize your account and profile picture.";
 </script>
 </body>
 </html>
