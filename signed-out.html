@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signed out</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+}
+#logo {
+position: absolute;
+top: 300px;
+left: 50%;
+margin-left: -150px;
+height: 50px;
+width: 300px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 30px;
+font-weight: bold;
+color: white;
+cursor: default;
+}
+#logo:hover {
+border-radius: 7px;
+}
+#p {
+position: absolute;
+top: 200px;
+left: 50%;
+margin-left: -160px;
+font-size: 30px;
+width: 320px;
+text-align: center;
+}
+#tea {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 100%;
+user-select: none;
+z-index: -1;
+max-height: 650px;
+}
+</style>
+</head>
+<body>
+<a href="login" target="_blank">
+<button id="logo">Sign back in</button>
+</a>
+
+<p id="p">You have signed out.</p>
+
+<img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
+
+</body>
+</html>
