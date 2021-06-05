@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TeaBag</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+}
+#logo {
+position: absolute;
+top: 20px;
+left: 20px;
+width: 200px;
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 30px;
+font-weight: bold;
+color: white;
+cursor: pointer;
+}
+#logo:hover {
+border-radius: 7px;
+}
+#noscript {
+position: absolute;
+top: 40%;
+font-size: 25px;
+margin: 0px 50px 0px 50px;
+}
+#directions {
+position: absolute;
+top: 20%;
+font-size: 20px;
+margin: 0px 50px 0px 50px;
+}
+.input {
+width: 350px;
+height: 35px;
+font-size: 22px;
+background: transparent;
+border-style: solid;
+border-color: #2F3137 #2F3137 grey #2F3137;
+margin-top: 40px;
+}
+.input:focus {
+outline-width: 0;
+border-color: #2F3137 #2F3137 white #2F3137;
+}
+</style>
+</head>
+<body>
+<button id="logo" onclick="location.reload();">TeaBag</button>
+<noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
+<div id="directions">
+<p>Create a username to set up TeaBag</p>
+<input type="text" autocomplete="off" class="input" placeholder="Enter your name">
+<br>
+<input type="password" autocomplete="off" class="input" placeholder="Create a password">
+</div>
+</body>
+</html>
