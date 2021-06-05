@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="t">TeaBag sign in</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+}
+#logo {
+position: absolute;
+top: 20px;
+left: 20px;
+width: 200px;
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 30px;
+font-weight: bold;
+color: white;
+cursor: default;
+}
+#logo:hover {
+border-radius: 7px;
+}
+#noscript {
+position: absolute;
+top: 40%;
+font-size: 25px;
+margin: 0px 50px 0px 50px;
+}
+#directions {
+position: absolute;
+top: 20%;
+font-size: 20px;
+margin: 0px 50px 0px 50px;
+width: 360px;
+visibility: hidden;
+}
+.input {
+width: 350px;
+height: 35px;
+font-size: 22px;
+background: transparent;
+border-style: solid;
+border-color: #2F3137 #2F3137 grey #2F3137;
+margin-top: 40px;
+}
+.input:focus {
+outline-width: 0;
+border-color: #2F3137 #2F3137 white #2F3137;
+}
+#submit {
+width: 150px;
+height: 45px;
+font-size: 22px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-weight: bold;
+color: white;
+cursor: default;
+margin-top: 60px;
+opacity: 0.6;
+pointer-events: none;
+}
+#submit:hover {
+border-radius: 7px;
+}
+#tea {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 100%;
+user-select: none;
+z-index: -1;
+max-height: 650px;
+}
+#forgot {
+font-size: 15px;
+margin-left: 40px;
+text-decoration: none;
+}
+#forgot:hover {
+text-decoration: underline;
+}
+#window {
+position: fixed;
+top: 0px;
+width: 100%;
+left: 0px;
+height: 100%;
+}
+</style>
+</head>
+<body>
+<button id="logo" onclick="location.reload();">TeaBag</button>
+<noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
+<div id="directions">
+<p id="p">Sign in to start brewing virtual tea</p>
+<input type="text" autocomplete="off" class="input" placeholder="Enter your username" id="username">
+<br>
+<input type="password" autocomplete="off" class="input" placeholder="Enter your password" id="password" onclick="verify()">
+<button id="submit" onclick="signIn()">Sign in</button>
+<a href="account" id="forgot">Sign up</a>
+</div>
+
+<!-- photo on side -->
+<img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
+<script>
+document.getElementById("directions").style.visibility = "visible";
+document.getElementById("username").value = localStorage.getItem("account").split(":")[0];
+function verify() {
+document.getElementById("submit").style.pointerEvents = "auto";
+document.getElementById("submit").style.opacity = "1";
+}
+function signIn() {
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+if (password.value == localStorage.getItem("account").split(":")[1]) {
+document.getElementById("directions").style.visibility = "hidden";
+document.getElementById("logo").style.visibility = "hidden";
+document.getElementById("tea").style.visibility = "hidden";
+var window = document.createElement("EMBED");
+window.src = "game";
+window.id = "window";
+document.body.appendChild(window);
+document.getElementById("t").innerHTML = "TeaBag: playing now";
+} else {
+document.getElementById("p").innerHTML = "Incorrect password. Try again.";
+document.getElementById("password").focus();
+document.getElementById("password").value = "";
+document.getElementById("forgot").innerHTML = "Forgot password?";
+}
+}
+</script>
+</body>
+</html>
