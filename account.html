@@ -87,7 +87,7 @@ max-height: 650px;
 </style>
 </head>
 <body>
-<button id="logo" onclick="location.reload();">TeaBag</button>
+<button id="logo" onclick="changePage()">TeaBag</button>
 <noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
 <div id="directions">
 <p id="p">Create a username to set up TeaBag</p>
@@ -120,6 +120,9 @@ location.replace("login");
   document.getElementById("submit").innerHTML = "Error";
   document.getElementById("p").innerHTML = "You browser failed to save your account info. Please turn on local storage.";
 }
+}
+function changePage() {
+  location.replace("login");
 }
 </script>
 </body>
