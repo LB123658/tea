@@ -4,6 +4,7 @@
 <title>TeaBag</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link red="icon" href="https://lb123658.github.io/tea/img/favicon.png" type="image/png">
 <style>
 body {
 background: #2F3137;
@@ -25,7 +26,7 @@ border: none;
 font-size: 30px;
 font-weight: bold;
 color: white;
-cursor: pointer;
+cursor: default;
 }
 #logo:hover {
 border-radius: 7px;
@@ -41,6 +42,8 @@ position: absolute;
 top: 20%;
 font-size: 20px;
 margin: 0px 50px 0px 50px;
+width: 360px;
+visibility: hidden;
 }
 .input {
 width: 350px;
@@ -55,16 +58,57 @@ margin-top: 40px;
 outline-width: 0;
 border-color: #2F3137 #2F3137 white #2F3137;
 }
+#submit {
+width: 150px;
+height: 45px;
+font-size: 22px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-weight: bold;
+color: white;
+cursor: default;
+margin-top: 60px;
+opacity: 0.6;
+pointer-events: none;
+}
+#submit:hover {
+border-radius: 7px;
+}
 </style>
 </head>
 <body>
 <button id="logo" onclick="location.reload();">TeaBag</button>
 <noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
 <div id="directions">
-<p>Create a username to set up TeaBag</p>
-<input type="text" autocomplete="off" class="input" placeholder="Enter your name">
+<p id="p">Create a username to set up TeaBag</p>
+<input type="text" autocomplete="off" class="input" placeholder="Enter your name" id="username">
 <br>
-<input type="password" autocomplete="off" class="input" placeholder="Create a password">
+<input type="password" autocomplete="off" class="input" placeholder="Create a password" id="password" onclick="verify()">
+<button id="submit" onclick="signIn()">Continue</button>
 </div>
+<script>
+document.getElementById("directions").style.visibility = "visible";
+document.getElementById("username").focus();
+
+function verify() {
+document.getElementById("submit").style.pointerEvents = "auto";
+document.getElementById("submit").style.opacity = "1";
+}
+function signIn() {
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("account", username.value + ":" + password.value);
+// open login page
+location.replace("login");
+} else {
+  document.getElementById("submit").innerHTML = "Error";
+  document.getElementById("p").innerHTML = "You browser failed to save your account info. Please turn on local storage.";
+}
+}
+</script>
 </body>
 </html>
