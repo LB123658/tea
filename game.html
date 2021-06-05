@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<!-- THIS IS THE OFFICIAL GAME PAGE -->
 <html>
 <head>
-<title id="t">TeaBag sign in</title>
+<title id="t">TeaBag | official game</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <style>
 body {
 background: #2F3137;
@@ -13,6 +15,15 @@ background: #2F3137;
 font-family: 'Montserrat', sans-serif;
 user-select: none;
 color: white;
+}
+#top {
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 90px;
+background: #37393F;
+z-index: 1;
 }
 #logo {
 position: absolute;
@@ -38,8 +49,10 @@ font-size: 25px;
 margin: 0px 50px 0px 50px;
 }
 #p {
-margin: 200px 50px 0px 50px;
-font-size: 30px;
+position: absolute;
+top: 6px;
+left: 250px;
+font-size: 25px;
 }
 a {
 text-decoration: none;
@@ -47,16 +60,118 @@ text-decoration: none;
 a:hover {
 text-decoration: underline;
 }
+#left {
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100px;
+height: 100%;
+background: #3e4045;
+}
+.icon {
+width: 60px;
+height: 60px;
+background: #2F3137;
+border: none;
+color: #5765F2;
+border-radius: 15px;
+}
+.icon:hover {
+border-radius: 7px;
+}
+#home {
+position: absolute;
+top: 100px;
+left: 20px;
+}
+#teas {
+position: absolute;
+top: 170px;
+left: 20px;
+}
+#money {
+position: absolute;
+top: 240px;
+left: 20px;
+}
+#account {
+position: absolute;
+top: 310px;
+left: 20px;
+}
+#settings {
+position: absolute;
+top: 380px;
+left: 20px;
+}
+.material-icons {
+color: lightgrey;
+}
+#banner {
+position: fixed;
+left: 100px;
+background: grey;
+color: white;
+border-radius: 2px;
+padding: 5px;
+visibility: hidden;
+z-index: 10;
+}
+@media screen and (max-width: 515px) {
+  #p {
+    top: -8px;
+  }
+}
 </style>
 </head>
 <body>
-<button id="logo" onclick="location.reload();">TeaBag</button>
+<div id="top">
+  <button id="logo">TeaBag</button>
+  <p id="p">Brewing virtual tea.</p>
+</div>
+
+<div id="left">
+  <button class="icon" id="home" onmouseover="homeHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">home</span></button>
+  <button class="icon" id="teas" onmouseover="cupHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">local_cafe</span></button>
+  <button class="icon" id="money" onmouseover="coinHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">paid</span></button>
+  <button class="icon" id="account" onmouseover="accountHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">account_circle</span></button>
+  <button class="icon" id="settings" onmouseover="settingsHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">settings</span></button>
+</div>
+
+<!-- hover info banner -->
+<p id="banner">TeaBag</p>
+
 <noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
-<p id="p">TeaBag is not available yet but will be ready soon. <br><br> <a href="login" target="_blank"><span onclick="close()">Sign out</span></a></p>
 
 <script>
-function close() {
-window.close();
+var banner = document.getElementById("banner");
+function homeHover() {
+banner.innerHTML = "TeaBag home";
+banner.style.top = "100px";
+banner.style.visibility = "visible";
+}
+function unhover() {
+banner.style.visibility = "hidden";
+}
+function cupHover() {
+banner.innerHTML = "Types of tea";
+banner.style.top = "170px";
+banner.style.visibility = "visible";
+}
+function coinHover() {
+banner.innerHTML = "Your funds";
+banner.style.top = "240px";
+banner.style.visibility = "visible";
+}
+function accountHover() {
+banner.innerHTML = localStorage.getItem("account").split(":")[0] + "'s account";
+banner.style.top = "310px";
+banner.style.visibility = "visible";
+}
+function settingsHover() {
+banner.innerHTML = "Settings";
+banner.style.top = "380px";
+banner.style.visibility = "visible";
 }
 </script>
 </body>
