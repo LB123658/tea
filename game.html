@@ -184,7 +184,21 @@ margin-left: 120px;
 font-size: 25px;
 margin-right: 50px;
 }
-@media screen and (max-width: 515px) {
+#signout {
+width: 150px;
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 25px;
+font-weight: bold;
+color: white;
+cursor: default;
+}
+#signout:hover {
+border-radius: 7px;
+}
+@media screen and (max-width: 510px) {
   #p {
     top: -8px;
   }
@@ -198,11 +212,11 @@ margin-right: 50px;
 </div>
 
 <div id="left">
-  <button class="icon" id="home" onmouseover="homeHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">home</span></button>
-  <button class="icon" id="teas" onmouseover="cupHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">local_cafe</span></button>
-  <button class="icon" id="money" onmouseover="coinHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">paid</span></button>
-  <button class="icon" id="account" onmouseover="accountHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">account_circle</span></button>
-  <button class="icon" id="settings" onmouseover="settingsHover()" onmouseout="unhover()"><span class="material-icons" style="font-size:30px;">settings</span></button>
+  <button class="icon" id="home" onmouseover="homeHover()" onmouseout="unhover()" onclick="home()"><span class="material-icons" style="font-size:30px;">home</span></button>
+  <button class="icon" id="teas" onmouseover="cupHover()" onmouseout="unhover()" onclick="teas()"><span class="material-icons" style="font-size:30px;">local_cafe</span></button>
+  <button class="icon" id="money" onmouseover="coinHover()" onmouseout="unhover()" onclick="money()"><span class="material-icons" style="font-size:30px;">paid</span></button>
+  <button class="icon" id="account" onmouseover="accountHover()" onmouseout="unhover()" onclick="account()"><span class="material-icons" style="font-size:30px;">account_circle</span></button>
+  <button class="icon" id="settings" onmouseover="settingsHover()" onmouseout="unhover()" onclick="settings()"><span class="material-icons" style="font-size:30px;">settings</span></button>
 </div>
 
 <!-- BREW button -->
@@ -214,7 +228,7 @@ margin-right: 50px;
 
 <!-- main area of game where this happen -->
 <div id="homediv">
-<p class="preloadtext">Welcome to your TeaBag homescreen! <br><br> Sorry, TeaBag is currently not available yet. Check back in the next few days.</p>
+<p class="preloadtext">Welcome to your TeaBag homescreen! <br><br> Sorry, TeaBag is currently unavailable. Check back in the next few days.</p>
 </div>
 
 <div id="teasdiv">
@@ -276,7 +290,84 @@ brewbanner.style.visibility = "hidden";
 }
 
 //load account info page 
-document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + ". <br><br> TeaBag is not available yet. Please check back in a few days and then you will be able customize your account and profile picture.";
+document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> TeaBag is not available yet. Please check back in a few days and then you will be able customize your account and profile picture.<br><br> <a href='login'><button id='signout'>Sign out</button>";
+
+
+// add script to make buttons work
+var homediv = document.getElementById("homediv");
+var teasdiv = document.getElementById("teasdiv");
+var moneydiv = document.getElementById("moneydiv");
+var accountdiv = document.getElementById("accountdiv");
+var settingsdiv = document.getElementById("settingsdiv");
+var one = document.getElementById("home");
+var two = document.getElementById("teas");
+var three = document.getElementById("money");
+var four = document.getElementById("account");
+var five = document.getElementById("settings");
+
+//on loading change home button to blue
+one.style.background = "#5765F2";
+
+function home() {
+homediv.style.visibility = "visible";
+teasdiv.style.visibility = "hidden";
+moneydiv.style.visibility = "hidden";
+accountdiv.style.visibility = "hidden";
+settingsdiv.style.visibility = "hidden";
+one.style.background = "#5765F2";
+two.style.background = "#2f3137";
+three.style.background = "#2f3137";
+four.style.background = "#2f3137";
+five.style.background = "#2f3137";
+}
+function teas() {
+homediv.style.visibility = "hidden";
+teasdiv.style.visibility = "visible";
+moneydiv.style.visibility = "hidden";
+accountdiv.style.visibility = "hidden";
+settingsdiv.style.visibility = "hidden";
+one.style.background = "#2f3137";
+two.style.background = "#5765F2";
+three.style.background = "#2f3137";
+four.style.background = "#2f3137";
+five.style.background = "#2f3137";
+}
+function money() {
+homediv.style.visibility = "hidden";
+teasdiv.style.visibility = "hidden";
+moneydiv.style.visibility = "visible";
+accountdiv.style.visibility = "hidden";
+settingsdiv.style.visibility = "hidden";
+one.style.background = "#2f3137";
+two.style.background = "#2f3137";
+three.style.background = "#5765F2";
+four.style.background = "#2f3137";
+five.style.background = "#2f3137";
+}
+function account() {
+homediv.style.visibility = "hidden";
+teasdiv.style.visibility = "hidden";
+moneydiv.style.visibility = "hidden";
+accountdiv.style.visibility = "visible";
+settingsdiv.style.visibility = "hidden";
+one.style.background = "#2f3137";
+two.style.background = "#2f3137";
+three.style.background = "#2f3137";
+four.style.background = "#5765F2";
+five.style.background = "#2f3137";
+}
+function settings() {
+homediv.style.visibility = "hidden";
+teasdiv.style.visibility = "hidden";
+moneydiv.style.visibility = "hidden";
+accountdiv.style.visibility = "hidden";
+settingsdiv.style.visibility = "visible";
+one.style.background = "#2f3137";
+two.style.background = "#2f3137";
+three.style.background = "#2f3137";
+four.style.background = "#2f3137";
+five.style.background = "#5765F2";
+}
 </script>
 </body>
 </html>
