@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TeaBag</title>
+<title>Create your TeaBag account</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
@@ -75,6 +75,15 @@ pointer-events: none;
 #submit:hover {
 border-radius: 7px;
 }
+#tea {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 100%;
+user-select: none;
+z-index: -1;
+max-height: 650px;
+}
 </style>
 </head>
 <body>
@@ -87,6 +96,9 @@ border-radius: 7px;
 <input type="password" autocomplete="off" class="input" placeholder="Create a password" id="password" onclick="verify()">
 <button id="submit" onclick="signIn()">Continue</button>
 </div>
+
+<!-- photo on side -->
+<img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
 <script>
 document.getElementById("directions").style.visibility = "visible";
 document.getElementById("username").focus();
