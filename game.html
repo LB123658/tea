@@ -205,6 +205,34 @@ border-radius: 15px;
 .item:hover {
 background: #3e4045;
 }
+.b {
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 25px;
+font-weight: bold;
+color: white;
+cursor: default;
+padding-left: 15px;
+padding-right: 15px;
+}
+.b:hover {
+border-radius: 7px;
+}
+.utensil {
+width: 250px;
+height: 250px;
+font-size: 20px;
+border: none;
+border-radius: 15px;
+background: #3e4045;
+opacity: 0.7;
+}
+.utensil:hover {
+border-radius: 7px;
+opacity: 1;
+}
 @media screen and (max-width: 510px) {
   #p {
     top: -8px;
@@ -235,15 +263,27 @@ background: #3e4045;
 
 <!-- main area of game where this happen -->
 <div id="homediv">
-<p class="preloadtext">Welcome to TeaBag! <br><br> <img src="https://lb123658.github.io/tea/img/teapot.svg" class="item"><br> You have unlocked the default teapot. More coming soon.</p>
+  <p class="preloadtext">Welcome to TeaBag! 
+  <br><br><br> New updates:
+  <br><br>Full game coming soon.
+  <br>
+  <img src="https://lb123658.github.io/tea/img/teapot.svg" class="item">
+  <br> 
+  Introducing the default teapot. More coming soon.</p>
 </div>
 
 <div id="teasdiv">
-<p class="preloadtext">TeaBag is not available yet so none of your tea has loaded.</p>
+<p class="preloadtext">All available items...
+<br><br>
+<button class="utensil"><img src="https://lb123658.github.io/tea/img/teapot.svg" class="item"><br>Default teapot</button>
+
+</p>
 </div>
 
 <div id="moneydiv">
-<p class="preloadtext">You have $0.00 right now.</p>
+<p class="preloadtext">You have <span id="funds">$0.00</span> right now.
+<br><br>
+<button class="b" onclick="teas()">See all items</button></p>
 </div>
 
 <div id="accountdiv">
@@ -251,7 +291,7 @@ background: #3e4045;
 </div>
 
 <div id="settingsdiv">
-<p class="preloadtext">Language: English (only option)<br><br>JavaScript and localStorage must be allowed because they save your progress and account info.<br><br> TeaBag never tracks you and your info is only stored on your computer. <br><br> WARNING: clearing browser search history will erase your TeaBag accound and all progress in the game.</p>
+<p class="preloadtext">Language: English (only option)<br><br>JavaScript and localStorage must be allowed because they save your progress and account info.<br><br> TeaBag never tracks you and your info is only stored on your computer. <br><br> WARNING: clearing browser search history or cookies will erase your TeaBag accound and all progress in the game.</p>
 </div>
 
 
@@ -270,7 +310,7 @@ function unhover() {
 banner.style.visibility = "hidden";
 }
 function cupHover() {
-banner.innerHTML = "Types of tea";
+banner.innerHTML = "Tea supplies";
 banner.style.top = "170px";
 banner.style.visibility = "visible";
 }
