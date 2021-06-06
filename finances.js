@@ -167,3 +167,36 @@ cupD.addEventListener("click", buycupD);
 function buypotA() {
   localStorage.setItem("Pota", "1");
 }
+function buypotB() {
+  localStorage.setItem("Potb", "1");
+}
+function buypotC() {
+  localStorage.setItem("Potc", "1");
+}
+function buypotD() {
+  localStorage.setItem("Potd", "1");
+}
+function buyboxA() {
+  localStorage.setItem("Boxa", "1");
+}
+function buyboxB() {
+  localStorage.setItem("Boxb", "1");
+}
+function buyboxC() {
+  localStorage.setItem("Boxc", "1");
+}
+function buyboxD() {
+  localStorage.setItem("Boxd", "1");
+}
+function buycupA() {
+  localStorage.setItem("Cupa", "1");
+}
+function buycupB() {
+  localStorage.setItem("Cupb", "1");
+}
+function buycupC() {
+  localStorage.setItem("Cupc", "1");
+}
+function buycupD() {
+  localStorage.setItem("Cupd", "1");
+}
