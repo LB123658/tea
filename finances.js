@@ -14,12 +14,6 @@ localStorage.setItem("Cupb", "0");
 localStorage.setItem("Cupc", "0");
 localStorage.setItem("Cupd", "0");
 
-//create money storage
-localStorage.setItem("money", "0");
-
-// create point storage system
-localStorage.setItem("points", "0");
-
 // items in store
 // teapots in store
 var potA = document.getElementById("potA");
