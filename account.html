@@ -120,6 +120,11 @@ location.replace("login");
   document.getElementById("submit").innerHTML = "Error";
   document.getElementById("p").innerHTML = "You browser failed to save your account info. Please turn on local storage.";
 }
+  //create money storage
+localStorage.setItem("money", "0");
+
+// create point storage system
+localStorage.setItem("points", "0");
 }
 function changePage() {
   location.replace("login");
