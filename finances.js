@@ -46,8 +46,9 @@ var points = localStorage.getItem("points");
 // MONEY STORAGE for account
 var money = localStorage.getItem("money");
 
-// always show correct money amount
+// always show correct money and points amount
 funds.innerHTML = money;
+document.getElementById("score").innerHTML = points;
 
 // only show items you can afford
 if (money < 10) {
