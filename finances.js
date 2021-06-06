@@ -71,7 +71,7 @@ if (money < 10) {
   cupC.style.cursor = "not-allowed";
   cupD.style.cursor = "not-allowed";
 }
-if (money < 30) {
+ else if (money < 30) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "none";
   potD.style.pointerEvents = "none";
@@ -91,7 +91,7 @@ if (money < 30) {
   cupC.style.cursor = "not-allowed";
   cupD.style.cursor = "not-allowed";
 }
-if (money < 50) {
+ else if (money < 50) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "auto";
   potD.style.pointerEvents = "none";
@@ -111,7 +111,7 @@ if (money < 50) {
   cupC.style.cursor = "default";
   cupD.style.cursor = "not-allowed";
 }
-if (money > 49) {
+ else if (money > 49) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "auto";
   potD.style.pointerEvents = "auto";
