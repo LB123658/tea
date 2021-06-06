@@ -159,7 +159,8 @@ cupD.addEventListener("click", increasePoints);
 
 // function to increase points
 function increasePoints() {
-  localStorage.setItem("points", +points + 1);
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + +10);
 }
 
 // add purchase functions to items
