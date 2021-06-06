@@ -2,11 +2,15 @@
 
 <script>
 if (location.search.split("=")[1] == "red") {
-document.getElementById("handle").style.fill = "#d12d2a";
-document.getElementById("top").style.fill = "#e83d3a";
 document.getElementById("main").style.fill = "#b32d2b";
-document.getElementById("spout").style.fill = "#d12d2a";
-document.getElementById("highlight").style.fill = "#e0605e";
+} else if (location.search.split("=")[1] == "green") {
+document.getElementById("main").style.fill = "green";
+} else if (location.search.split("=")[1] == "yellow") {
+document.getElementById("main").style.fill = "#ffc000";
+} else if (location.search.split("=")[1] == "grey") {
+document.getElementById("main").style.fill = "#282828";
+} else if (location.search.split("=")[1] == "purple") {
+document.getElementById("main").style.fill = "purple";
 }
 </script>
 </svg>
