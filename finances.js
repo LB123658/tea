@@ -166,4 +166,4 @@ cupD.addEventListener("click", buycupD);
 // purchase functions
 function buypotA() {
   localStorage.setItem("Pota", "1");
-  
+}
