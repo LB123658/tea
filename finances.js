@@ -1,19 +1,5 @@
 // this keeps track of purchases in the main embedded page
 
-// create storage for owned items
-localStorage.setItem("Pota", "0");
-localStorage.setItem("Potb", "0");
-localStorage.setItem("Potc", "0");
-localStorage.setItem("Potd", "0");
-localStorage.setItem("Boxa", "0");
-localStorage.setItem("Boxb", "0");
-localStorage.setItem("Boxc", "0");
-localStorage.setItem("Boxd", "0");
-localStorage.setItem("Cupa", "0");
-localStorage.setItem("Cupb", "0");
-localStorage.setItem("Cupc", "0");
-localStorage.setItem("Cupd", "0");
-
 // items in store
 // teapots in store
 var potA = document.getElementById("potA");
@@ -176,3 +162,8 @@ cupA.addEventListener("click", buycupA);
 cupB.addEventListener("click", buycupD);
 cupC.addEventListener("click", buycupC);
 cupD.addEventListener("click", buycupD);
+
+// purchase functions
+function buypotA() {
+  localStorage.setItem("Pota", "1");
+  
