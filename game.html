@@ -42,12 +42,6 @@ cursor: default;
 #logo:hover {
 border-radius: 7px;
 }
-#noscript {
-position: absolute;
-top: 40%;
-font-size: 25px;
-margin: 0px 50px 0px 50px;
-}
 #p {
 position: absolute;
 top: 6px;
@@ -307,13 +301,7 @@ border-radius: 7px;
 
 <!-- main area of game where this happen -->
 <div id="homediv">
-  <p class="preloadtext" id="homescreentext">Welcome to TeaBag! 
-  <br><br><br> New updates:
-  <br><br>Full game coming soon.
-  <br>
-  <img src="https://lb123658.github.io/tea/img/teapot.svg" class="item">
-  <br> 
-  Introducing the default teapot. More coming soon.</p>
+  <p class="preloadtext" id="homescreentext">Turn on JavaScript to play TeaBag</p>
 </div>
 
 <div id="teasdiv">
@@ -321,23 +309,23 @@ border-radius: 7px;
 <br><br>
 Teapots
 <br>
-<button class="utensil">Default teapot<br><img src="https://lb123658.github.io/tea/img/teapot.svg" class="item"><br>Free</button>
-<button class="utensil">Red teapot<br><img src="https://lb123658.github.io/tea/img/teapot-red.svg" class="item"><br>$10.00</button>
-<button class="utensil">Golden teapot<br><img src="https://lb123658.github.io/tea/img/teapot-golden.svg" class="item"><br>$30.00</button>
-<button class="utensil">Emerald teapot<br><img src="https://lb123658.github.io/tea/img/teapot-emerald.svg" class="item"><br>$50.00</button>
+<button class="utensil" id="potA">Default teapot<br><img src="https://lb123658.github.io/tea/img/teapot.svg" class="item"><br>Free</button>
+<button class="utensil" id="potB">Red teapot<br><img src="https://lb123658.github.io/tea/img/teapot-red.svg" class="item"><br>$10.00</button>
+<button class="utensil" id="potC">Golden teapot<br><img src="https://lb123658.github.io/tea/img/teapot-golden.svg" class="item"><br>$30.00</button>
+<button class="utensil" id="potD">Emerald teapot<br><img src="https://lb123658.github.io/tea/img/teapot-emerald.svg" class="item"><br>$50.00</button>
 <br><br>
 Types of tea<br><br>
-<button class="utensil">Box of black tea<br><img src="https://lb123658.github.io/tea/img/box.svg" class="item"><br>Free</button>
-<button class="utensil">Box of rooibos tea<br><img src="https://lb123658.github.io/tea/img/box-red.svg" class="item"><br>$10.00</button>
-<button class="utensil">Box of tumeric tea<br><img src="https://lb123658.github.io/tea/img/box-yellow.svg" class="item"><br>$30.00</button>
-<button class="utensil">Box of green tea<br><img src="https://lb123658.github.io/tea/img/grntea.svg" class="item"><br>$50.00</button>
+<button class="utensil" id="boxA">Box of black tea<br><img src="https://lb123658.github.io/tea/img/box.svg" class="item"><br>Free</button>
+<button class="utensil" id="boxB">Box of rooibos tea<br><img src="https://lb123658.github.io/tea/img/box-red.svg" class="item"><br>$10.00</button>
+<button class="utensil" id="boxC">Box of tumeric tea<br><img src="https://lb123658.github.io/tea/img/box-yellow.svg" class="item"><br>$30.00</button>
+<button class="utensil" id="boxD">Box of green tea<br><img src="https://lb123658.github.io/tea/img/grntea.svg" class="item"><br>$50.00</button>
 <br><br>
 Tea cups
 <br><br>
-<button class="utensil">Default teacup<br><img src="https://lb123658.github.io/tea/img/cup.svg" class="item"><br>Free</button>
-<button class="utensil">Red teacup<br><img src="https://lb123658.github.io/tea/img/cup-red.svg" class="item"><br>$10.00</button>
-<button class="utensil">Golden teacup<br><img src="https://lb123658.github.io/tea/img/cup-yellow.svg" class="item"><br>$30.00</button>
-<button class="utensil">Emerald teacup<br><img src="https://lb123658.github.io/tea/img/greencup.svg" class="item"><br>$50.00</button>
+<button class="utensil" id="cupA">Default teacup<br><img src="https://lb123658.github.io/tea/img/cup.svg" class="item"><br>Free</button>
+<button class="utensil" id="cupB">Red teacup<br><img src="https://lb123658.github.io/tea/img/cup-red.svg" class="item"><br>$10.00</button>
+<button class="utensil" id="cupC">Golden teacup<br><img src="https://lb123658.github.io/tea/img/cup-yellow.svg" class="item"><br>$30.00</button>
+<button class="utensil" id="cupD">Emerald teacup<br><img src="https://lb123658.github.io/tea/img/greencup.svg" class="item"><br>$50.00</button>
 </p>
 </div>
 
@@ -352,15 +340,13 @@ Tea cups
 </div>
 
 <div id="settingsdiv">
-<p class="preloadtext">Language: English (only option)<br><br>JavaScript and localStorage must be allowed because they save your progress and account info.<br><br> TeaBag never tracks you and your info is only stored on your computer. <br><br> WARNING: clearing browser search history or cookies will erase your TeaBag accound and all progress in the game.<br><br>WARNING: resetting your account or creating a new one on the same computer will reset all progress in the game.</p>
+<p class="preloadtext">Language: English (only option)<br><br>JavaScript and localStorage must be allowed because they save your progress and account info.<br><br> TeaBag never tracks you and your info is only stored on your computer. <br><br> WARNING: clearing browser search history or cookies will erase your TeaBag account and all progress in the game.<br><br>WARNING: resetting your account or creating a new one on the same computer will reset all progress in the game.</p>
 </div>
 
 <!-- about app section -->
 <div id="version">
 <p id="versiontext">TeaBag (not released yet)<br><br>Last updated June 6, 2021<br><br><button id="closeApp" onclick="hideabout()">Close</button></p>
 </div>
-<noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
-
 <script>
 var banner = document.getElementById("banner");
 var brewbanner = document.getElementById("brewbanner");
