@@ -1,11 +1,5 @@
 // this keeps track of purchases in the main embedded page
 
-//create money storage
-localStorage.setItem("money", "0");
-
-// create point storage system
-localStorage.setItem("points", "0");
-
 // create storage for owned items
 localStorage.setItem("Pota", "0");
 localStorage.setItem("Potb", "0");
@@ -19,6 +13,12 @@ localStorage.setItem("Cupa", "0");
 localStorage.setItem("Cupb", "0");
 localStorage.setItem("Cupc", "0");
 localStorage.setItem("Cupd", "0");
+
+//create money storage
+localStorage.setItem("money", "0");
+
+// create point storage system
+localStorage.setItem("points", "0");
 
 // items in store
 // teapots in store
