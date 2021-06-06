@@ -70,8 +70,7 @@ if (money < 10) {
   cupB.style.cursor = "not-allowed";
   cupC.style.cursor = "not-allowed";
   cupD.style.cursor = "not-allowed";
-}
- else if (money < 30) {
+} else if (money < 30) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "none";
   potD.style.pointerEvents = "none";
@@ -90,8 +89,7 @@ if (money < 10) {
   cupB.style.cursor = "default";
   cupC.style.cursor = "not-allowed";
   cupD.style.cursor = "not-allowed";
-}
- else if (money < 50) {
+} else if (money < 50) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "auto";
   potD.style.pointerEvents = "none";
@@ -130,7 +128,26 @@ if (money < 10) {
   cupB.style.cursor = "default";
   cupC.style.cursor = "default";
   cupD.style.cursor = "default";
-}
+} else if (money == 0) {
+  potB.style.pointerEvents = "none";
+  potC.style.pointerEvents = "none";
+  potD.style.pointerEvents = "none";
+  boxB.style.pointerEvents = "none";
+  boxC.style.pointerEvents = "none";
+  boxD.style.pointerEvents = "none";
+  cupB.style.pointerEvents = "none";
+  cupC.style.pointerEvents = "none";
+  cupD.style.pointerEvents = "none";
+  potB.style.cursor = "not-allowed";
+  potC.style.cursor = "not-allowed";
+  potD.style.cursor = "not-allowed";
+  boxB.style.cursor = "not-allowed";
+  boxC.style.cursor = "not-allowed";
+  boxD.style.cursor = "not-allowed";
+  cupB.style.cursor = "not-allowed";
+  cupC.style.cursor = "not-allowed";
+  cupD.style.cursor = "not-allowed";
+} 
 
 // add point increase function
 potA.addEventListener("click", increasePoints);
