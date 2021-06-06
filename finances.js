@@ -132,20 +132,6 @@ if (money < 10) {
   cupD.style.cursor = "default";
 }
 
-// add purchase functions to items
-potA.addEventListener("click", buypotA);
-potB.addEventListener("click", buypotB);
-potC.addEventListener("click", buypotC);
-potD.addEventListener("click", buypotD);
-boxA.addEventListener("click", buyboxA);
-boxB.addEventListener("click", buyboxB);
-boxC.addEventListener("click", buyboxC);
-boxD.addEventListener("click", buyboxD);
-cupA.addEventListener("click", buycupA);
-cupB.addEventListener("click", buycupD);
-cupC.addEventListener("click", buycupC);
-cupD.addEventListener("click", buycupD);
-
 // add point increase function
 potA.addEventListener("click", increasePoints);
 potB.addEventListener("click", increasePoints);
@@ -164,3 +150,17 @@ cupD.addEventListener("click", increasePoints);
 function increasePoints() {
   localStorage.setItem("points", +points + 1);
 }
+
+// add purchase functions to items
+potA.addEventListener("click", buypotA);
+potB.addEventListener("click", buypotB);
+potC.addEventListener("click", buypotC);
+potD.addEventListener("click", buypotD);
+boxA.addEventListener("click", buyboxA);
+boxB.addEventListener("click", buyboxB);
+boxC.addEventListener("click", buyboxC);
+boxD.addEventListener("click", buyboxD);
+cupA.addEventListener("click", buycupA);
+cupB.addEventListener("click", buycupD);
+cupC.addEventListener("click", buycupC);
+cupD.addEventListener("click", buycupD);
