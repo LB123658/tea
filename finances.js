@@ -1,5 +1,25 @@
 // this keeps track of purchases in the main embedded page
 
+//create money storage
+localStorage.setItem("money", "0");
+
+// create point storage system
+localStorage.setItem("points", "0");
+
+// create storage for owned items
+localStorage.setItem("Pota", "0");
+localStorage.setItem("Potb", "0");
+localStorage.setItem("Potc", "0");
+localStorage.setItem("Potd", "0");
+localStorage.setItem("Boxa", "0");
+localStorage.setItem("Boxb", "0");
+localStorage.setItem("Boxc", "0");
+localStorage.setItem("Boxd", "0");
+localStorage.setItem("Cupa", "0");
+localStorage.setItem("Cupb", "0");
+localStorage.setItem("Cupc", "0");
+localStorage.setItem("Cupd", "0");
+
 // items in store
 // teapots in store
 var potA = document.getElementById("potA");
@@ -17,11 +37,19 @@ var cupB = document.getElementById("cupB");
 var cupC = document.getElementById("cupC");
 var cupD = document.getElementById("cupD");
 
-// money section
+// money variable section
 var funds = document.getElementById("funds");
+
+// points variable section
+var points = localStorage.getItem("points");
 
 // MONEY STORAGE for account
 var money = localStorage.getItem("money");
+
+// always show correct money amount
+funds.innerHTML = money;
+
+// only show items you can afford
 if (money < 10) {
   potB.style.pointerEvents = "none";
   potC.style.pointerEvents = "none";
@@ -101,4 +129,37 @@ if (money > 49) {
   cupB.style.cursor = "default";
   cupC.style.cursor = "default";
   cupD.style.cursor = "default";
+}
+
+// add purchase functions to items
+potA.addEventListener("click", buypotA);
+potB.addEventListener("click", buypotB);
+potC.addEventListener("click", buypotC);
+potD.addEventListener("click", buypotD);
+boxA.addEventListener("click", buyboxA);
+boxB.addEventListener("click", buyboxB);
+boxC.addEventListener("click", buyboxC);
+boxD.addEventListener("click", buyboxD);
+cupA.addEventListener("click", buycupA);
+cupB.addEventListener("click", buycupD);
+cupC.addEventListener("click", buycupC);
+cupD.addEventListener("click", buycupD);
+
+// add point increase function
+potA.addEventListener("click", increasePoints);
+potB.addEventListener("click", increasePoints);
+potC.addEventListener("click", increasePoints);
+potD.addEventListener("click", increasePoints);
+boxA.addEventListener("click", increasePoints);
+boxB.addEventListener("click", increasePoints);
+boxC.addEventListener("click", increasePoints);
+boxD.addEventListener("click", increasePoints);
+cupA.addEventListener("click", increasePoints);
+cupB.addEventListener("click", increasePoints);
+cupC.addEventListener("click", increasePoints);
+cupD.addEventListener("click", increasePoints);
+
+// function to increase points
+function increasePoints() {
+  localStorage.setItem("points", +points + 1);
 }
