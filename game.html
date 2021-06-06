@@ -104,6 +104,11 @@ position: absolute;
 top: 380px;
 left: 20px;
 }
+#aboutApp {
+position: absolute;
+bottom: 20px;
+left: 20px;
+}
 .material-icons {
 color: lightgrey;
 }
@@ -228,10 +233,49 @@ border: none;
 border-radius: 15px;
 background: #3e4045;
 opacity: 0.7;
+margin: 20px 20px 20px 20px;
 }
 .utensil:hover {
 border-radius: 7px;
 opacity: 1;
+}
+#version {
+position: fixed;
+top: 50%;
+left: 50%;
+width: 350px;
+height: 250px;
+margin-left: -175px;
+margin-top: -125px;
+z-index: 3;
+border-radius: 15px;
+background: #282828;
+visibility: hidden;
+overflow: auto;
+}
+#version:hover {
+border-radius: 7px;
+}
+#versiontext {
+font-size: 20px;
+position: absolute;
+top: 20px;
+text-align: center;
+width: 100%;
+left: 0px;
+}
+#closeApp {
+height: 40px;
+background: white;
+border: none;
+border-radius: 15px;
+color: #282828;
+font-size: 25px;
+padding-left: 15px;
+padding-right: 15px;
+}
+#closeApp:hover {
+border-radius: 7px;
 }
 @media screen and (max-width: 510px) {
   #p {
@@ -252,6 +296,9 @@ opacity: 1;
   <button class="icon" id="money" onmouseover="coinHover()" onmouseout="unhover()" onclick="money()"><span class="material-icons" style="font-size:30px;">paid</span></button>
   <button class="icon" id="account" onmouseover="accountHover()" onmouseout="unhover()" onclick="account()"><span class="material-icons" style="font-size:30px;">account_circle</span></button>
   <button class="icon" id="settings" onmouseover="settingsHover()" onmouseout="unhover()" onclick="settings()"><span class="material-icons" style="font-size:30px;">settings</span></button>
+  
+  <!-- about app section -->
+  <button class="icon" id="aboutApp" onclick="showabout()"><span class="material-icons" style="font-size:30px;">info</span></button>
 </div>
 
 <!-- BREW button -->
@@ -275,8 +322,17 @@ opacity: 1;
 <div id="teasdiv">
 <p class="preloadtext">All available items...
 <br><br>
+Teapots
+<br>
 <button class="utensil"><img src="https://lb123658.github.io/tea/img/teapot.svg" class="item"><br>Default teapot</button>
-
+<button class="utensil"><img src="https://lb123658.github.io/tea/img/teapot-red.svg" class="item"><br>Red teapot</button>
+<button class="utensil"><img src="https://lb123658.github.io/tea/img/teapot-golden.svg" class="item"><br>Golden teapot</button>
+<button class="utensil"><img src="https://lb123658.github.io/tea/img/teapot-emerald.svg" class="item"><br>Emerald teapot</button>
+<br><br>
+Types of tea (unavailable)
+<br><br>
+Tea cups (unavailable)
+<br><br>
 </p>
 </div>
 
@@ -294,7 +350,10 @@ opacity: 1;
 <p class="preloadtext">Language: English (only option)<br><br>JavaScript and localStorage must be allowed because they save your progress and account info.<br><br> TeaBag never tracks you and your info is only stored on your computer. <br><br> WARNING: clearing browser search history or cookies will erase your TeaBag accound and all progress in the game.</p>
 </div>
 
-
+<!-- about app section -->
+<div id="version">
+<p id="versiontext">TeaBag (not released yet)<br><br>Last updated June 5, 2021<br><br><button id="closeApp" onclick="hideabout()">Close</button></p>
+</div>
 <noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
 
 <script>
@@ -414,6 +473,18 @@ two.style.background = "#2f3137";
 three.style.background = "#2f3137";
 four.style.background = "#2f3137";
 five.style.background = "#5765F2";
+}
+function showabout() {
+document.body.style.opacity = "0.7";
+document.body.style.pointerEvents = "none";
+document.getElementById("version").style.visibility = "visible";
+document.getElementById("version").style.pointerEvents = "auto";
+document.getElementById("versiontext").innerHTML = "Your TeaBag account:<br>" + localStorage.getItem("account").split(":")[0] + "<br><br>TeaBag last updated:<br> June 5, 2021<br><br><button id='closeApp' onclick='hideabout()'>Close</button>";
+}
+function hideabout() {
+document.body.style.opacity = "1";
+document.body.style.pointerEvents = "auto";
+document.getElementById("version").style.visibility = "hidden";
 }
 </script>
 </body>
