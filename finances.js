@@ -41,7 +41,7 @@ if (money < 10) {
   cupB.style.pointerEvents = "none";
   cupC.style.pointerEvents = "none";
   cupD.style.pointerEvents = "none";
-} else if ((money < 30) && (money > 10)) {
+} else if (money == 10) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "none";
   potD.style.pointerEvents = "none";
@@ -51,7 +51,67 @@ if (money < 10) {
   cupB.style.pointerEvents = "auto";
   cupC.style.pointerEvents = "none";
   cupD.style.pointerEvents = "none";
-} else if ((money < 50) && (money > 30)) {
+} else if (money == 15) {
+  potB.style.pointerEvents = "auto";
+  potC.style.pointerEvents = "none";
+  potD.style.pointerEvents = "none";
+  boxB.style.pointerEvents = "auto";
+  boxC.style.pointerEvents = "none";
+  boxD.style.pointerEvents = "none";
+  cupB.style.pointerEvents = "auto";
+  cupC.style.pointerEvents = "none";
+  cupD.style.pointerEvents = "none";
+} else if (money == 20) {
+  potB.style.pointerEvents = "auto";
+  potC.style.pointerEvents = "none";
+  potD.style.pointerEvents = "none";
+  boxB.style.pointerEvents = "auto";
+  boxC.style.pointerEvents = "none";
+  boxD.style.pointerEvents = "none";
+  cupB.style.pointerEvents = "auto";
+  cupC.style.pointerEvents = "none";
+  cupD.style.pointerEvents = "none";
+} else if (money == 25) {
+  potB.style.pointerEvents = "auto";
+  potC.style.pointerEvents = "none";
+  potD.style.pointerEvents = "none";
+  boxB.style.pointerEvents = "auto";
+  boxC.style.pointerEvents = "none";
+  boxD.style.pointerEvents = "none";
+  cupB.style.pointerEvents = "auto";
+  cupC.style.pointerEvents = "none";
+  cupD.style.pointerEvents = "none";
+} else if (money == 30) {
+  potB.style.pointerEvents = "auto";
+  potC.style.pointerEvents = "auto";
+  potD.style.pointerEvents = "none";
+  boxB.style.pointerEvents = "auto";
+  boxC.style.pointerEvents = "auto";
+  boxD.style.pointerEvents = "none";
+  cupB.style.pointerEvents = "auto";
+  cupC.style.pointerEvents = "auto";
+  cupD.style.pointerEvents = "none";
+} else if (money == 35) {
+  potB.style.pointerEvents = "auto";
+  potC.style.pointerEvents = "auto";
+  potD.style.pointerEvents = "none";
+  boxB.style.pointerEvents = "auto";
+  boxC.style.pointerEvents = "auto";
+  boxD.style.pointerEvents = "none";
+  cupB.style.pointerEvents = "auto";
+  cupC.style.pointerEvents = "auto";
+  cupD.style.pointerEvents = "none";
+} else if (money == 40) {
+  potB.style.pointerEvents = "auto";
+  potC.style.pointerEvents = "auto";
+  potD.style.pointerEvents = "none";
+  boxB.style.pointerEvents = "auto";
+  boxC.style.pointerEvents = "auto";
+  boxD.style.pointerEvents = "none";
+  cupB.style.pointerEvents = "auto";
+  cupC.style.pointerEvents = "auto";
+  cupD.style.pointerEvents = "none";
+} else if (money == 45) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "auto";
   potD.style.pointerEvents = "none";
