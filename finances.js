@@ -271,48 +271,60 @@ function buycupD() {
 if (Pota == 1) {
   potaprice.innerHTML = "Owned";
   potA.removeEventListener("click", buypotA);
+  potA.style.pointerEvents = "none";
 } 
 if (Potb == 1) {
   potbprice.innerHTML = "Owned";
   potB.removeEventListener("click", buypotB);
+  potB.style.pointerEvents = "none";
 } 
 if (Potc == 1) {
   potcprice.innerHTML = "Owned";
   potC.removeEventListener("click", buypotC);
+  potC.style.pointerEvents = "none";
 } 
 if (Potd == 1) {
   potdprice.innerHTML = "Owned";
   potD.removeEventListener("click", buypotD);
+  potD.style.pointerEvents = "none";
 } 
 if (Boxa == 1) {
   boxaprice.innerHTML = "Owned";
   boxA.removeEventListener("click", buyboxA);
+  boxA.style.pointerEvents = "none";
 } 
 if (Boxb == 1) {
   boxbprice.innerHTML = "Owned";
   boxB.removeEventListener("click", buyboxB);
+  boxB.style.pointerEvents = "none";
 } 
 if (Boxc == 1) {
   boxcprice.innerHTML = "Owned";
   boxC.removeEventListener("click", buyboxC);
+  boxC.style.pointerEvents = "none";
 } 
 if (Boxd == 1) {
   boxdprice.innerHTML = "Owned";
   boxD.removeEventListener("click", buyboxD);
+  boxD.style.pointerEvents = "none";
 } 
 if (Cupa == 1) {
   cupaprice.innerHTML = "Owned";
   cupA.removeEventListener("click", buycupA);
+  cupA.style.pointerEvents = "none";
 } 
 if (Cupb == 1) {
   cupbprice.innerHTML = "Owned";
   cupB.removeEventListener("click", buycupB);
+  cupB.style.pointerEvents = "none";
 } 
 if (Cupc == 1) {
   cupcprice.innerHTML = "Owned";
   cupC.removeEventListener("click", buycupC);
+  cupC.style.pointerEvents = "none";
 } 
 if (Cupd == 1) {
   cupdprice.innerHTML = "Owned";
   cupD.removeEventListener("click", buycupD);
+  cupD.style.pointerEvents = "none";
 } 
