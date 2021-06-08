@@ -17,6 +17,22 @@ var cupB = document.getElementById("cupB");
 var cupC = document.getElementById("cupC");
 var cupD = document.getElementById("cupD");
 
+var potaprice = document.getElementById("potaprice");
+var potbprice = document.getElementById("potbprice");
+var potcprice = document.getElementById("potcprice");
+var potdprice = document.getElementById("potdprice");
+
+var boxaprice = document.getElementById("boxaprice");
+var boxbprice = document.getElementById("boxbprice");
+var boxcprice = document.getElementById("boxcprice");
+var boxdprice = document.getElementById("boxdprice");
+
+var cupaprice = document.getElementById("cupaprice");
+var cupbprice = document.getElementById("cupbprice");
+var cupcprice = document.getElementById("cupcprice");
+var cupdprice = document.getElementById("cupdprice");
+
+
 // money variable section
 var funds = document.getElementById("funds");
 
@@ -180,6 +196,7 @@ function buypotC() {
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 30);
+  
 }
 function buypotD() {
   localStorage.setItem("Potd", "1");
@@ -233,3 +250,20 @@ function buycupD() {
   localStorage.setItem("points", +fot + 10); 
   localStorage.setItem("money", +money - 50);
 }
+
+if (Pota == 1) {
+  potaprice.innerHTML = "Owned";
+  potA.removeEventListener("click", buypotA);
+} else if (Potb == 1) {
+  potbprice.innerHTML = "Owned";
+  potB.removeEventListener("click", buypotB);
+} else if (Potc == 1) {
+  potcprice.innerHTML = "Owned";
+  potC.removeEventListener("click", buypotC);
+} else if (Potd == 1) {
+  potdprice.innerHTML = "Owned";
+  potD.removeEventListener("click", buypotD);
+} else if (Boxa == 1) {
+  boxaprice.innerHTML = "Owned";
+  boxA.removeEventListener("click", buyboxA);
+} 
