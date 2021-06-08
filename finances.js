@@ -50,7 +50,7 @@ if (money < 10) {
   cupB.style.cursor = "not-allowed";
   cupC.style.cursor = "not-allowed";
   cupD.style.cursor = "not-allowed";
-} else if (money < 30) {
+} else if (money < 30 && money > 10) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "none";
   potD.style.pointerEvents = "none";
@@ -69,7 +69,7 @@ if (money < 10) {
   cupB.style.cursor = "default";
   cupC.style.cursor = "not-allowed";
   cupD.style.cursor = "not-allowed";
-} else if (money < 50) {
+} else if (money < 50 && money > 30) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "auto";
   potD.style.pointerEvents = "none";
@@ -129,20 +129,6 @@ if (money < 10) {
   cupD.style.cursor = "not-allowed";
 } 
 
-// add point increase function
-potA.addEventListener("click", increasePoints);
-potB.addEventListener("click", increasePoints);
-potC.addEventListener("click", increasePoints);
-potD.addEventListener("click", increasePoints);
-boxA.addEventListener("click", increasePoints);
-boxB.addEventListener("click", increasePoints);
-boxC.addEventListener("click", increasePoints);
-boxD.addEventListener("click", increasePoints);
-cupA.addEventListener("click", increasePoints);
-cupB.addEventListener("click", increasePoints);
-cupC.addEventListener("click", increasePoints);
-cupD.addEventListener("click", increasePoints);
-
 // function to increase points
 function increasePoints() {
   var fot = localStorage.getItem("points");
@@ -166,37 +152,79 @@ cupD.addEventListener("click", buycupD);
 // purchase functions
 function buypotA() {
   localStorage.setItem("Pota", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
 }
 function buypotB() {
   localStorage.setItem("Potb", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 10);
 }
 function buypotC() {
   localStorage.setItem("Potc", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 30);
 }
 function buypotD() {
   localStorage.setItem("Potd", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 35);
 }
 function buyboxA() {
   localStorage.setItem("Boxa", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
 }
 function buyboxB() {
   localStorage.setItem("Boxb", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 10);
 }
 function buyboxC() {
   localStorage.setItem("Boxc", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 30);
 }
 function buyboxD() {
   localStorage.setItem("Boxd", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 35);
 }
 function buycupA() {
   localStorage.setItem("Cupa", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
 }
 function buycupB() {
   localStorage.setItem("Cupb", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 10);
 }
 function buycupC() {
   localStorage.setItem("Cupc", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 30);
 }
 function buycupD() {
   localStorage.setItem("Cupd", "1");
+  var fot = localStorage.getItem("points");
+  localStorage.setItem("points", +fot + 10);
+  var dinero = localStorage.getItem("money");
+  localStorage.setItem("money"), +dinero - 35);
 }
