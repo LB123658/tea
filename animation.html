@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="t">TeaBag animation</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+}
+#teapot {
+position: absolute;
+top: 20%;
+left: 50%;
+animation-name: animate;
+animation-duration: 60s;
+animation-iteration-count: 1;
+}
+#box {
+position: absolute;
+top: 5%;
+z-index: -1;
+left: 50%;
+width: 300px;
+margin-left: -150px;
+opacity: 0.7;
+}
+#cup {
+position: absolute;
+top: 40%;
+right: 60%;
+z-index: 1;
+width: 300px;
+margin-left: -150px;
+}
+#status {
+font-size: 30px;
+margin: 0px 0px 0px 10px;
+}
+#reward {
+position: fixed;
+top: 50%;
+left: 50%;
+width: 300px;
+height: 150px;
+margin-top: -75px;
+margin-left: -150px;
+font-size: 30px;
+text-align: center;
+z-index: 2;
+border-radius: 7px;
+border: 2px solid #5765f2;
+text-align: center;
+background: #484848;
+visibility: hidden;
+}
+@keyframes animate {
+ 0% {transform: translate(2px, -2px);} 
+ 1% {transform: translate(-2px, 2px);}
+ 2% {transform: translate(2px, -2px);}
+ 3% {transform: translate(-2px, 2px);}
+ 4% {transform: translate(2px, -2px);}
+ 5% {transform: translate(-2px, 2px);}
+ 6% {transform: translate(2px, -2px);}
+ 7% {transform: translate(-2px, 2px);}
+ 8% {transform: translate(2px, -2px);}
+ 9% {transform: translate(-2px, 2px);}
+ 10% {transform: translate(-2px, -2px);}
+ 11% {transform: translate(2px, 2px);}
+ 12% {transform: translate(-2px, -2px);}
+ 13% {transform: translate(2px, 2px);}
+ 14% {transform: translate(-2px, -2px);}
+ 15% {transform: translate(2px, 2px);}
+ 16% {transform: translate(-2px, -2px);}
+ 17% {transform: translate(2px, 2px);}
+ 18% {transform: translate(-2px, -2px);}
+ 19% {transform: translate(2px, 2px);}
+ 20% {transform: translate(-2px, -2px);}
+ 21% {transform: translate(2px, 2px);}
+ 22% {transform: translate(-2px, -2px);}
+ 23% {transform: translate(2px, 2px);}
+ 24% {transform: translate(-2px, -2px);}
+ 25% {transform: translate(2px, 2px);}
+ 27% {transform: translate(-2px, -2px);}
+ 29% {transform: translate(2px, 2px);}
+ 31% {transform: translate(-2px, -2px);}
+ 33% {transform: translate(2px, 2px);}
+ 35% {transform: translate(-2px, -2px);}
+ 37% {transform: translate(2px, 2px);}
+ 39% {transform: translate(-2px, -2px);}
+ 41% {transform: translate(2px, 2px);}
+ 42% {transform: translate(-2px, -2px);}
+ 43% {transform: translate(2px, 2px);}
+ 44% {transform: translate(-4px, -4px);}
+ 45% {transform: translate(4px, 4px);}
+ 46% {transform: translate(-4px, -4px);}
+ 47% {transform: translate(4px, 4px);}
+ 48% {transform: translate(-4px, -4px);}
+ 49% {transform: translate(2px, 2px);}
+ 50% {top: 20%; left: 50%;}
+ 57% {top: 10%; left: 30%; transform: rotate(0deg);}
+ 65% {top: 10%; left: 25%; transform: rotate(-30deg);}
+ 70% {transform: rotate(10deg); top: 10%; left: 30%;}
+}
+</style>
+</head>
+<body onload="setTimeout(finish, 45000)">
+<img src="https://lb123658.github.io/tea/img/teapot.svg" id="teapot">
+<img src="https://lb123658.github.io/tea/img/box.svg" id="box">
+<img src="https://lb123658.github.io/tea/img/cup.svg" id="cup">
+<p id="status">Making your tea right now...</p>
+<audio autoplay hidden>
+  <source src="https://lb123658.github.io/tea/sounds/boiling.mp3" type="audio/mpeg">
+</audio>
+
+<div id="reward">
+<p>You have recieved $5.00</p>
+</div>
+<script>
+function finish() {
+document.getElementById("status").innerHTML = "Your tea is ready!";
+document.getElementById("reward").style.visibility = "visible";
+}
+
+//change teapot colors
+document.getElementById("teapot").src = location.search.split("=")[1].split("&")[0];
+document.getElementById("box").src = location.search.split("&")[1].split("=")[1];
+document.getElementById("cup").src = location.search.split("=")[3];
+</script>
+</body>
+</html>
