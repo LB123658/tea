@@ -41,16 +41,7 @@ if (money < 10) {
   cupB.style.pointerEvents = "none";
   cupC.style.pointerEvents = "none";
   cupD.style.pointerEvents = "none";
-  potB.style.cursor = "not-allowed";
-  potC.style.cursor = "not-allowed";
-  potD.style.cursor = "not-allowed";
-  boxB.style.cursor = "not-allowed";
-  boxC.style.cursor = "not-allowed";
-  boxD.style.cursor = "not-allowed";
-  cupB.style.cursor = "not-allowed";
-  cupC.style.cursor = "not-allowed";
-  cupD.style.cursor = "not-allowed";
-} else if (money < 30 && money > 10) {
+} else if ((money < 30) && (money > 10)) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "none";
   potD.style.pointerEvents = "none";
@@ -60,16 +51,7 @@ if (money < 10) {
   cupB.style.pointerEvents = "auto";
   cupC.style.pointerEvents = "none";
   cupD.style.pointerEvents = "none";
-  potB.style.cursor = "default";
-  potC.style.cursor = "not-allowed";
-  potD.style.cursor = "not-allowed";
-  boxB.style.cursor = "default";
-  boxC.style.cursor = "not-allowed";
-  boxD.style.cursor = "not-allowed";
-  cupB.style.cursor = "default";
-  cupC.style.cursor = "not-allowed";
-  cupD.style.cursor = "not-allowed";
-} else if (money < 50 && money > 30) {
+} else if ((money < 50) && (money > 30)) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "auto";
   potD.style.pointerEvents = "none";
@@ -79,17 +61,7 @@ if (money < 10) {
   cupB.style.pointerEvents = "auto";
   cupC.style.pointerEvents = "auto";
   cupD.style.pointerEvents = "none";
-  potB.style.cursor = "default";
-  potC.style.cursor = "default";
-  potD.style.cursor = "not-allowed";
-  boxB.style.cursor = "default";
-  boxC.style.cursor = "default";
-  boxD.style.cursor = "not-allowed";
-  cupB.style.cursor = "default";
-  cupC.style.cursor = "default";
-  cupD.style.cursor = "not-allowed";
-}
- else if (money > 49) {
+} else if (money > 49) {
   potB.style.pointerEvents = "auto";
   potC.style.pointerEvents = "auto";
   potD.style.pointerEvents = "auto";
@@ -99,15 +71,6 @@ if (money < 10) {
   cupB.style.pointerEvents = "auto";
   cupC.style.pointerEvents = "auto";
   cupD.style.pointerEvents = "auto";
-  potB.style.cursor = "default";
-  potC.style.cursor = "default";
-  potD.style.cursor = "default";
-  boxB.style.cursor = "default";
-  boxC.style.cursor = "default";
-  boxD.style.cursor = "default";
-  cupB.style.cursor = "default";
-  cupC.style.cursor = "default";
-  cupD.style.cursor = "default";
 } else if (money == 0) {
   potB.style.pointerEvents = "none";
   potC.style.pointerEvents = "none";
@@ -118,15 +81,6 @@ if (money < 10) {
   cupB.style.pointerEvents = "none";
   cupC.style.pointerEvents = "none";
   cupD.style.pointerEvents = "none";
-  potB.style.cursor = "not-allowed";
-  potC.style.cursor = "not-allowed";
-  potD.style.cursor = "not-allowed";
-  boxB.style.cursor = "not-allowed";
-  boxC.style.cursor = "not-allowed";
-  boxD.style.cursor = "not-allowed";
-  cupB.style.cursor = "not-allowed";
-  cupC.style.cursor = "not-allowed";
-  cupD.style.cursor = "not-allowed";
 } 
 
 // function to increase points
