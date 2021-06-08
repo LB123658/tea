@@ -60,6 +60,35 @@ text-align: center;
 background: #484848;
 visibility: hidden;
 }
+ #brewbanner {
+position: fixed;
+right: 85px;
+bottom: 20px;
+background: grey;
+color: white;
+border-radius: 2px;
+padding: 5px;
+visibility: hidden;
+z-index: 1;
+}
+.icon {
+width: 60px;
+height: 60px;
+background: #2F3137;
+border: none;
+color: #5765F2;
+border-radius: 15px;
+}
+.icon:hover {
+border-radius: 7px;
+}
+#brew {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1;
+background: #5765F2;
+}
 @keyframes animate {
  0% {transform: translate(2px, -2px);} 
  1% {transform: translate(-2px, 2px);}
@@ -122,16 +151,35 @@ visibility: hidden;
 <div id="reward">
 <p>You have recieved $5.00</p>
 </div>
+ 
+<button class="icon" id="brew" onmouseover="brewHover()" onmouseout="brewUnhover()" onclick="close()"><span class="material-icons" style="font-size:30px;">close</span></button>
+<p id="brewbanner">Stop making tea</p>
+
 <script>
 function finish() {
 document.getElementById("status").innerHTML = "Your tea is ready!";
 document.getElementById("reward").style.visibility = "visible";
+var money = localStorage.getItem("money");
+localStorage.setItem("money", +money + 5);
+var points = localStorage.getItem("points");
+localStorage.setItem("points", +points + 10);
 }
 
+var brewbanner = document.getElementById("brewbanner");
+function brewHover() {
+brewbanner.style.visibility = "visible";
+}
+function brewUnhover() {
+brewbanner.style.visibility = "hidden";
+}
 //change teapot colors
 document.getElementById("teapot").src = location.search.split("=")[1].split("&")[0];
 document.getElementById("box").src = location.search.split("&")[1].split("=")[1];
 document.getElementById("cup").src = location.search.split("=")[3];
+ 
+function close() {
+ document.getElementById("animation").remove();
+}
 </script>
 </body>
 </html>
