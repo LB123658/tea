@@ -17,6 +17,8 @@ var cupB = document.getElementById("cupB");
 var cupC = document.getElementById("cupC");
 var cupD = document.getElementById("cupD");
 
+
+// item price tags 
 var potaprice = document.getElementById("potaprice");
 var potbprice = document.getElementById("potbprice");
 var potcprice = document.getElementById("potcprice");
@@ -32,6 +34,21 @@ var cupbprice = document.getElementById("cupbprice");
 var cupcprice = document.getElementById("cupcprice");
 var cupdprice = document.getElementById("cupdprice");
 
+// local storage to see if you own items
+var Pota = localStorage.getItem("Pota");
+var Potb = localStorage.getItem("Potb");
+var Potc = localStorage.getItem("Potc");
+var Potd = localStorage.getItem("Potd");
+
+var Boxa = localStorage.getItem("Boxa");
+var Boxb = localStorage.getItem("Boxb");
+var Boxc = localStorage.getItem("Boxc");
+var Boxd = localStorage.getItem("Boxd");
+
+var Cupa = localStorage.getItem("Cupa");
+var Cupb = localStorage.getItem("Cupb");
+var Cupc = localStorage.getItem("Cupc");
+var Cupd = localStorage.getItem("Cupd");
 
 // money variable section
 var funds = document.getElementById("funds");
@@ -254,16 +271,48 @@ function buycupD() {
 if (Pota == 1) {
   potaprice.innerHTML = "Owned";
   potA.removeEventListener("click", buypotA);
-} else if (Potb == 1) {
+} 
+if (Potb == 1) {
   potbprice.innerHTML = "Owned";
   potB.removeEventListener("click", buypotB);
-} else if (Potc == 1) {
+} 
+if (Potc == 1) {
   potcprice.innerHTML = "Owned";
   potC.removeEventListener("click", buypotC);
-} else if (Potd == 1) {
+} 
+if (Potd == 1) {
   potdprice.innerHTML = "Owned";
   potD.removeEventListener("click", buypotD);
-} else if (Boxa == 1) {
+} 
+if (Boxa == 1) {
   boxaprice.innerHTML = "Owned";
   boxA.removeEventListener("click", buyboxA);
+} 
+if (Boxb == 1) {
+  boxbprice.innerHTML = "Owned";
+  boxB.removeEventListener("click", buyboxB);
+} 
+if (Boxc == 1) {
+  boxcprice.innerHTML = "Owned";
+  boxC.removeEventListener("click", buyboxC);
+} 
+if (Boxd == 1) {
+  boxdprice.innerHTML = "Owned";
+  boxD.removeEventListener("click", buyboxD);
+} 
+if (Cupa == 1) {
+  cupaprice.innerHTML = "Owned";
+  cupA.removeEventListener("click", buycupA);
+} 
+if (Cupb == 1) {
+  cupbprice.innerHTML = "Owned";
+  cupB.removeEventListener("click", buycupB);
+} 
+if (Cupc == 1) {
+  cupcprice.innerHTML = "Owned";
+  cupC.removeEventListener("click", buycupC);
+} 
+if (Cupd == 1) {
+  cupdprice.innerHTML = "Owned";
+  cupD.removeEventListener("click", buycupD);
 } 
