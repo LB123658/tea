@@ -159,22 +159,19 @@ function buypotB() {
   localStorage.setItem("Potb", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 10);
+  localStorage.setItem("money", +money - 10);
 }
 function buypotC() {
   localStorage.setItem("Potc", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 30);
+  localStorage.setItem("money", +money - 30);
 }
 function buypotD() {
   localStorage.setItem("Potd", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 50);
+  localStorage.setItem("money", +money - 50);
 }
 function buyboxA() {
   localStorage.setItem("Boxa", "1");
@@ -185,22 +182,19 @@ function buyboxB() {
   localStorage.setItem("Boxb", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 10);
+  localStorage.setItem("money", +money - 10);
 }
 function buyboxC() {
   localStorage.setItem("Boxc", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 30);
+  localStorage.setItem("money", +money - 30);
 }
 function buyboxD() {
   localStorage.setItem("Boxd", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 50);
+  localStorage.setItem("money", +money - 50);
 }
 function buycupA() {
   localStorage.setItem("Cupa", "1");
@@ -210,21 +204,18 @@ function buycupA() {
 function buycupB() {
   localStorage.setItem("Cupb", "1");
   var fot = localStorage.getItem("points");
-  localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 10);
+  localStorage.setItem("points", +fot + 10); 
+  localStorage.setItem("money", +money - 10);
 }
 function buycupC() {
   localStorage.setItem("Cupc", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 30);
+  localStorage.setItem("money", +money - 30);
 }
 function buycupD() {
   localStorage.setItem("Cupd", "1");
   var fot = localStorage.getItem("points");
-  localStorage.setItem("points", +fot + 10);
-  var dinero = localStorage.getItem("money");
-  localStorage.setItem("money", +dinero - 50);
+  localStorage.setItem("points", +fot + 10); 
+  localStorage.setItem("money", +money - 50);
 }
