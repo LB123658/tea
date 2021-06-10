@@ -17,7 +17,6 @@ var cupB = document.getElementById("cupB");
 var cupC = document.getElementById("cupC");
 var cupD = document.getElementById("cupD");
 
-
 // item price tags 
 var potaprice = document.getElementById("potaprice");
 var potbprice = document.getElementById("potbprice");
@@ -201,71 +200,106 @@ function buypotA() {
   localStorage.setItem("Pota", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
+  potaprice.innerHTML = "Owned";
+  potA.removeEventListener("click", buypotA);
+  potA.style.pointerEvents = "none";
 }
 function buypotB() {
   localStorage.setItem("Potb", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 10);
+  potbprice.innerHTML = "Owned";
+  potB.removeEventListener("click", buypotB);
+  potB.style.pointerEvents = "none";
 }
 function buypotC() {
   localStorage.setItem("Potc", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 30);
-  
+  potcprice.innerHTML = "Owned";
+  potC.removeEventListener("click", buypotC);
+  potC.style.pointerEvents = "none";
 }
 function buypotD() {
   localStorage.setItem("Potd", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 50);
+  potdprice.innerHTML = "Owned";
+  potD.removeEventListener("click", buypotD);
+  potD.style.pointerEvents = "none";
 }
 function buyboxA() {
   localStorage.setItem("Boxa", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
+  boxaprice.innerHTML = "Owned";
+  boxA.removeEventListener("click", buyboxA);
+  boxA.style.pointerEvents = "none";
 }
 function buyboxB() {
   localStorage.setItem("Boxb", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 10);
+  boxbprice.innerHTML = "Owned";
+  boxB.removeEventListener("click", buyboxB);
+  boxB.style.pointerEvents = "none";
 }
 function buyboxC() {
   localStorage.setItem("Boxc", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 30);
+  boxcprice.innerHTML = "Owned";
+  boxC.removeEventListener("click", buyboxC);
+  boxC.style.pointerEvents = "none";
 }
 function buyboxD() {
   localStorage.setItem("Boxd", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 50);
+  boxdprice.innerHTML = "Owned";
+  boxD.removeEventListener("click", buyboxD);
+  boxD.style.pointerEvents = "none";
 }
 function buycupA() {
   localStorage.setItem("Cupa", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
+  cupaprice.innerHTML = "Owned";
+  cupA.removeEventListener("click", buycupA);
+  cupA.style.pointerEvents = "none";
 }
 function buycupB() {
   localStorage.setItem("Cupb", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10); 
   localStorage.setItem("money", +money - 10);
+  cupbprice.innerHTML = "Owned";
+  cupB.removeEventListener("click", buycupB);
+  cupB.style.pointerEvents = "none";
 }
 function buycupC() {
   localStorage.setItem("Cupc", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10);
   localStorage.setItem("money", +money - 30);
+  cupcprice.innerHTML = "Owned";
+  cupC.removeEventListener("click", buycupC);
+  cupC.style.pointerEvents = "none";
 }
 function buycupD() {
   localStorage.setItem("Cupd", "1");
   var fot = localStorage.getItem("points");
   localStorage.setItem("points", +fot + 10); 
   localStorage.setItem("money", +money - 50);
+  cupdprice.innerHTML = "Owned";
+  cupD.removeEventListener("click", buycupD);
+  cupD.style.pointerEvents = "none";
 }
 
 if (Pota == 1) {
