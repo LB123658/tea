@@ -153,7 +153,7 @@ background: #5765F2;
 <p>You have recieved $5.00</p>
 </div>
  
-<button class="icon" id="brew" onmouseover="brewHover()" onmouseout="brewUnhover()" onclick="close()"><span class="material-icons" style="font-size:30px;">close</span></button>
+<button class="icon" id="brew" onmouseover="brewHover()" onmouseout="brewUnhover()" onclick="closetea()"><span class="material-icons" style="font-size:30px;">close</span></button>
 <p id="brewbanner">Stop making tea</p>
 
 <script>
@@ -177,9 +177,9 @@ brewbanner.style.visibility = "hidden";
 document.getElementById("teapot").src = location.search.split("=")[1].split("&")[0];
 document.getElementById("box").src = location.search.split("&")[1].split("=")[1];
 document.getElementById("cup").src = location.search.split("=")[3];
- 
-function close() {
- document.getElementById("animation").remove();
+
+function closetea() {
+location.replace("game");
 }
 </script>
 </body>
