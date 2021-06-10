@@ -191,7 +191,7 @@ boxB.addEventListener("click", buyboxB);
 boxC.addEventListener("click", buyboxC);
 boxD.addEventListener("click", buyboxD);
 cupA.addEventListener("click", buycupA);
-cupB.addEventListener("click", buycupD);
+cupB.addEventListener("click", buycupB);
 cupC.addEventListener("click", buycupC);
 cupD.addEventListener("click", buycupD);
 
