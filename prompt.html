@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title id="t">TeaBag animation prompt</title>
+<title id="t">TeaBag tea choices</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
@@ -95,12 +95,14 @@ Choose your teacup.<br><br>
 <button class="option" id="cupC" onclick="Cupc()"><b>Golden teacup</b><br><br>It might be solid gold</button>
 <button class="option" id="cupD" onclick="Cupd()"><b>Emerald teacup</b><br><br>A very green teacup</button>
 <br><br>
+--Not selecting anything will use your selections from last time--
+<br><br>
 <button class="option" onclick="seguir()" id="go">Brew tea</button>
 </p>
 </div>
 
 <button class="icon" id="brew" onmouseover="brewHover()" onmouseout="brewUnhover()" onclick="closeT()"><span class="material-icons" style="font-size:30px;">close</span></button>
-<p id="brewbanner">Return to homepage</p>
+<p id="brewbanner">Close tea options</p>
 
 <script>
 var brewbanner = document.getElementById("brewbanner");
@@ -230,6 +232,39 @@ var Cupc = localStorage.getItem("Cupc");
 var Cupd = localStorage.getItem("Cupd");
 if (Pota == 0) {
 document.getElementById("potA").remove();
+}
+if (Potb == 0) {
+document.getElementById("potB").remove();
+}
+if (Potc == 0) {
+document.getElementById("potC").remove();
+}
+if (Potd == 0) {
+document.getElementById("potD").remove();
+}
+if (Boxa == 0) {
+document.getElementById("boxA").remove();
+}
+if (Boxb == 0) {
+document.getElementById("boxB").remove();
+}
+if (Boxc == 0) {
+document.getElementById("boxC").remove();
+}
+if (Boxd == 0) {
+document.getElementById("boxD").remove();
+}
+if (Cupa == 0) {
+document.getElementById("cupA").remove();
+}
+if (Cupb == 0) {
+document.getElementById("cupB").remove();
+}
+if (Cupc == 0) {
+document.getElementById("cupC").remove();
+}
+if (Cupd == 0) {
+document.getElementById("cupD").remove();
 }
 </script>
 </body>
