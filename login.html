@@ -102,7 +102,7 @@ height: 100%;
 </style>
 </head>
 <body>
-<button id="logo" onclick="location.reload();">TeaBag</button>
+<button id="logo" onclick="homepage()">TeaBag</button>
 <noscript id="noscript">Please turn on JavaScript to play TeaBag</noscript>
 <div id="directions">
 <p id="p">Sign in to start brewing virtual tea</p>
@@ -121,6 +121,9 @@ document.getElementById("username").value = localStorage.getItem("account").spli
 function verify() {
 document.getElementById("submit").style.pointerEvents = "auto";
 document.getElementById("submit").style.opacity = "1";
+}
+function homepage() {
+  location.replace("https://lb123658.github.io/tea");
 }
 function signIn() {
 var username = document.getElementById("username");
