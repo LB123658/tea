@@ -119,6 +119,7 @@ document.getElementById("potA").style.background = "#5765f2";
 document.getElementById("potB").style.background = "#282828";
 document.getElementById("potC").style.background = "#282828";
 document.getElementById("potD").style.background = "#282828";
+localStorage.setItem("first", first);
 }
 function Potb() {
 var first = "teapot=img/teapot-red.svg";
@@ -126,6 +127,7 @@ document.getElementById("potA").style.background = "#282828";
 document.getElementById("potB").style.background = "#5765f2";
 document.getElementById("potC").style.background = "#282828";
 document.getElementById("potD").style.background = "#282828";
+localStorage.setItem("first", first);
 }
 function Potc() {
 var first = "teapot=img/teapot-golden.svg";
@@ -133,6 +135,7 @@ document.getElementById("potA").style.background = "#282828";
 document.getElementById("potB").style.background = "#282828";
 document.getElementById("potC").style.background = "#5765f2";
 document.getElementById("potD").style.background = "#282828";
+localStorage.setItem("first", first);
 }
 function Potd() {
 var first = "teapot=img/teapot-emerald.svg";
@@ -140,6 +143,7 @@ document.getElementById("potA").style.background = "#282828";
 document.getElementById("potB").style.background = "#282828";
 document.getElementById("potC").style.background = "#282828";
 document.getElementById("potD").style.background = "#5765f2";
+localStorage.setItem("first", first);
 }
 function Boxa() {
 var second = "box=img/box.svg";
@@ -147,6 +151,7 @@ document.getElementById("boxA").style.background = "#5765f2";
 document.getElementById("boxB").style.background = "#282828";
 document.getElementById("boxC").style.background = "#282828";
 document.getElementById("boxD").style.background = "#282828";
+localStorage.setItem("second", second);
 }
 function Boxb() {
 var second = "box=img/box-red.svg";
@@ -154,6 +159,7 @@ document.getElementById("boxA").style.background = "#282828";
 document.getElementById("boxB").style.background = "#5765f2";
 document.getElementById("boxC").style.background = "#282828";
 document.getElementById("boxD").style.background = "#282828";
+localStorage.setItem("second", second);
 }
 function Boxc() {
 var second = "box=img/box-yellow.svg";
@@ -161,6 +167,7 @@ document.getElementById("boxA").style.background = "#282828";
 document.getElementById("boxB").style.background = "#282828";
 document.getElementById("boxC").style.background = "#5765f2";
 document.getElementById("boxD").style.background = "#282828";
+localStorage.setItem("second", second);
 }
 function Boxd() {
 var second = "box=img/grntea.svg";
@@ -168,6 +175,7 @@ document.getElementById("boxA").style.background = "#282828";
 document.getElementById("boxB").style.background = "#282828";
 document.getElementById("boxC").style.background = "#282828";
 document.getElementById("boxD").style.background = "#5765f2";
+localStorage.setItem("second", second);
 }
 function Cupa() {
 var third = "cup=img/cup.svg";
@@ -175,6 +183,7 @@ document.getElementById("cupA").style.background = "#5765f2";
 document.getElementById("cupB").style.background = "#282828";
 document.getElementById("cupC").style.background = "#282828";
 document.getElementById("cupD").style.background = "#282828";
+localStorage.setItem("third", third);
 }
 function Cupb() {
 var third = "cup=img/cup-red.svg";
@@ -182,6 +191,7 @@ document.getElementById("cupA").style.background = "#282828";
 document.getElementById("cupB").style.background = "#5765f2";
 document.getElementById("cupC").style.background = "#282828";
 document.getElementById("cupD").style.background = "#282828";
+localStorage.setItem("third", third);
 }
 function Cupc() {
 var third = "cup=img/cup-yellow.svg";
@@ -189,6 +199,7 @@ document.getElementById("cupA").style.background = "#282828";
 document.getElementById("cupB").style.background = "#282828";
 document.getElementById("cupC").style.background = "#5765f2";
 document.getElementById("cupD").style.background = "#282828";
+localStorage.setItem("third", third);
 }
 function Cupd() {
 var third = "cup=img/greencup.svg";
@@ -196,10 +207,29 @@ document.getElementById("cupA").style.background = "#282828";
 document.getElementById("cupB").style.background = "#282828";
 document.getElementById("cupC").style.background = "#282828";
 document.getElementById("cupD").style.background = "#5765f2";
+localStorage.setItem("third", third);
 }
 function seguir() {
-var url = "https://lb123658.github.io/tea/animation?" + first + "&" + second + "&" + third;
+var url = "https://lb123658.github.io/tea/animation?" + localStorage.getItem("first") + "&" + localStorage.getItem("second") + "&" + localStorage.getItem("third");
 location.replace(url);
+}
+// local storage to see if you own items
+var Pota = localStorage.getItem("Pota");
+var Potb = localStorage.getItem("Potb");
+var Potc = localStorage.getItem("Potc");
+var Potd = localStorage.getItem("Potd");
+
+var Boxa = localStorage.getItem("Boxa");
+var Boxb = localStorage.getItem("Boxb");
+var Boxc = localStorage.getItem("Boxc");
+var Boxd = localStorage.getItem("Boxd");
+
+var Cupa = localStorage.getItem("Cupa");
+var Cupb = localStorage.getItem("Cupb");
+var Cupc = localStorage.getItem("Cupc");
+var Cupd = localStorage.getItem("Cupd");
+if (Pota == 0) {
+document.getElementById("potA").remove();
 }
 </script>
 </body>
