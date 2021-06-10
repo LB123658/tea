@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,22 +80,22 @@ background: #5765f2;
 <body>
 <div id="div">
 <p class="p">Choose your teapot.<br><br>
-<button class="option" id="potA" onclick="Pota()"><b>Default teapot</b><br><br>A plain grey teapot</button>
-<button class="option" id="potB" onclick="Potb()"><b>Red teapot</b><br><br>Upgraded teapot that's red</button>
-<button class="option" id="potC" onclick="Potc()"><b>Golden teapot</b><br><br>Yellow teapot that costs $30</button>
-<button class="option" id="potD" onclick="Potd()"><b>Emerald teapot</b><br><br>Expensive green teapot</button>
+<button class="option" id="potA" onclick="teapota()"><b>Default teapot</b><br><br>A plain grey teapot</button>
+<button class="option" id="potB" onclick="teapotb()"><b>Red teapot</b><br><br>Upgraded teapot that's red</button>
+<button class="option" id="potC" onclick="teapotc()"><b>Golden teapot</b><br><br>Yellow teapot that costs $30</button>
+<button class="option" id="potD" onclick="teapotd()"><b>Emerald teapot</b><br><br>Expensive green teapot</button>
 <br><br>
 Choose your type of tea.<br><br>
-<button class="option" id="boxA" onclick="Boxa()"><b>Black tea</b><br><br>A box of plain black tea</button>
-<button class="option" id="boxB" onclick="Boxb()"><b>Rooibos tea</b><br><br>A box of rooibos tea</button>
-<button class="option" id="boxC" onclick="Boxc()"><b>Tumeric tea</b><br><br>A box of tumeric tea</button>
-<button class="option" id="boxD" onclick="Boxd()"><b>Green tea</b><br><br>A box of $50 green tea</button>
+<button class="option" id="boxA" onclick="teaboxa()"><b>Black tea</b><br><br>A box of plain black tea</button>
+<button class="option" id="boxB" onclick="teaboxb()"><b>Rooibos tea</b><br><br>A box of rooibos tea</button>
+<button class="option" id="boxC" onclick="teaboxc()"><b>Tumeric tea</b><br><br>A box of tumeric tea</button>
+<button class="option" id="boxD" onclick="teaboxd()"><b>Green tea</b><br><br>A box of $50 green tea</button>
 <br><br>
 Choose your teacup.<br><br>
-<button class="option" id="cupA" onclick="Cupa()"><b>Default teacup</b><br><br>A plain grey teacup</button>
-<button class="option" id="cupB" onclick="Cupb()"><b>Red teacup</b><br><br>A bright red teacup</button>
-<button class="option" id="cupC" onclick="Cupc()"><b>Golden teacup</b><br><br>It might be solid gold</button>
-<button class="option" id="cupD" onclick="Cupd()"><b>Emerald teacup</b><br><br>A very green teacup</button>
+<button class="option" id="cupA" onclick="teacupa()"><b>Default teacup</b><br><br>A plain grey teacup</button>
+<button class="option" id="cupB" onclick="teacupb()"><b>Red teacup</b><br><br>A bright red teacup</button>
+<button class="option" id="cupC" onclick="teacupc()"><b>Golden teacup</b><br><br>It might be solid gold</button>
+<button class="option" id="cupD" onclick="teacupd()"><b>Emerald teacup</b><br><br>A very green teacup</button>
 <br><br>
 --Not selecting anything will use your selections from last time--
 <br><br>
@@ -116,7 +117,7 @@ brewbanner.style.visibility = "hidden";
 function closeT() {
 location.replace("game");
 }
-function Pota() {
+function teapota() {
 var first = "teapot=img/teapot.svg";
 document.getElementById("potA").style.background = "#5765f2";
 document.getElementById("potB").style.background = "#282828";
@@ -124,7 +125,7 @@ document.getElementById("potC").style.background = "#282828";
 document.getElementById("potD").style.background = "#282828";
 localStorage.setItem("first", first);
 }
-function Potb() {
+function teapotb() {
 var first = "teapot=img/teapot-red.svg";
 document.getElementById("potA").style.background = "#282828";
 document.getElementById("potB").style.background = "#5765f2";
@@ -132,7 +133,7 @@ document.getElementById("potC").style.background = "#282828";
 document.getElementById("potD").style.background = "#282828";
 localStorage.setItem("first", first);
 }
-function Potc() {
+function teapotc() {
 var first = "teapot=img/teapot-golden.svg";
 document.getElementById("potA").style.background = "#282828";
 document.getElementById("potB").style.background = "#282828";
@@ -140,7 +141,7 @@ document.getElementById("potC").style.background = "#5765f2";
 document.getElementById("potD").style.background = "#282828";
 localStorage.setItem("first", first);
 }
-function Potd() {
+function teapotd() {
 var first = "teapot=img/teapot-emerald.svg";
 document.getElementById("potA").style.background = "#282828";
 document.getElementById("potB").style.background = "#282828";
@@ -148,7 +149,7 @@ document.getElementById("potC").style.background = "#282828";
 document.getElementById("potD").style.background = "#5765f2";
 localStorage.setItem("first", first);
 }
-function Boxa() {
+function teaboxa() {
 var second = "box=img/box.svg";
 document.getElementById("boxA").style.background = "#5765f2";
 document.getElementById("boxB").style.background = "#282828";
@@ -156,7 +157,7 @@ document.getElementById("boxC").style.background = "#282828";
 document.getElementById("boxD").style.background = "#282828";
 localStorage.setItem("second", second);
 }
-function Boxb() {
+function teaboxb() {
 var second = "box=img/box-red.svg";
 document.getElementById("boxA").style.background = "#282828";
 document.getElementById("boxB").style.background = "#5765f2";
@@ -164,7 +165,7 @@ document.getElementById("boxC").style.background = "#282828";
 document.getElementById("boxD").style.background = "#282828";
 localStorage.setItem("second", second);
 }
-function Boxc() {
+function teaboxc() {
 var second = "box=img/box-yellow.svg";
 document.getElementById("boxA").style.background = "#282828";
 document.getElementById("boxB").style.background = "#282828";
@@ -172,7 +173,7 @@ document.getElementById("boxC").style.background = "#5765f2";
 document.getElementById("boxD").style.background = "#282828";
 localStorage.setItem("second", second);
 }
-function Boxd() {
+function teaboxd() {
 var second = "box=img/grntea.svg";
 document.getElementById("boxA").style.background = "#282828";
 document.getElementById("boxB").style.background = "#282828";
@@ -180,7 +181,7 @@ document.getElementById("boxC").style.background = "#282828";
 document.getElementById("boxD").style.background = "#5765f2";
 localStorage.setItem("second", second);
 }
-function Cupa() {
+function teacupa() {
 var third = "cup=img/cup.svg";
 document.getElementById("cupA").style.background = "#5765f2";
 document.getElementById("cupB").style.background = "#282828";
@@ -188,7 +189,7 @@ document.getElementById("cupC").style.background = "#282828";
 document.getElementById("cupD").style.background = "#282828";
 localStorage.setItem("third", third);
 }
-function Cupb() {
+function teacupb() {
 var third = "cup=img/cup-red.svg";
 document.getElementById("cupA").style.background = "#282828";
 document.getElementById("cupB").style.background = "#5765f2";
@@ -196,7 +197,7 @@ document.getElementById("cupC").style.background = "#282828";
 document.getElementById("cupD").style.background = "#282828";
 localStorage.setItem("third", third);
 }
-function Cupc() {
+function teacupc() {
 var third = "cup=img/cup-yellow.svg";
 document.getElementById("cupA").style.background = "#282828";
 document.getElementById("cupB").style.background = "#282828";
@@ -204,7 +205,7 @@ document.getElementById("cupC").style.background = "#5765f2";
 document.getElementById("cupD").style.background = "#282828";
 localStorage.setItem("third", third);
 }
-function Cupd() {
+function teacupd() {
 var third = "cup=img/greencup.svg";
 document.getElementById("cupA").style.background = "#282828";
 document.getElementById("cupB").style.background = "#282828";
