@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="t">TeaBag animation prompt</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+font-size: 20px;
+}
+.option {
+width: 200px;
+background: #282828;
+border-radius: 15px;
+border: none;
+font-size: 20px;
+margin: 0px 20px 20px 20px;
+padding: 10px;
+cursor: default;
+max-height: 120px;
+}
+.option:hover {
+border-radius: 7px;
+}
+#div {
+width: 80%;
+position: absolute;
+top: 50px;
+left: 10%;
+}
+.p {
+width: 100%;
+text-align: center;
+}
+#brewbanner {
+position: fixed;
+right: 85px;
+bottom: 20px;
+background: grey;
+color: white;
+border-radius: 2px;
+padding: 5px;
+visibility: hidden;
+z-index: 1;
+font-size: 17px;
+}
+.icon {
+width: 60px;
+height: 60px;
+background: #2F3137;
+border: none;
+color: #5765F2;
+border-radius: 15px;
+}
+.icon:hover {
+border-radius: 7px;
+}
+#brew {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1;
+background: #5765F2;
+}
+#go:hover {
+background: #5765f2;
+}
+</style>
+</head>
+<body>
+<div id="div">
+<p class="p">Choose your teapot.<br><br>
+<button class="option" id="potA" onclick="Pota()"><b>Default teapot</b><br><br>A plain grey teapot</button>
+<button class="option" id="potB" onclick="Potb()"><b>Red teapot</b><br><br>Upgraded teapot that's red</button>
+<button class="option" id="potC" onclick="Potc()"><b>Golden teapot</b><br><br>Yellow teapot that costs $30</button>
+<button class="option" id="potD" onclick="Potd()"><b>Emerald teapot</b><br><br>Expensive green teapot</button>
+<br><br>
+Choose your type of tea.<br><br>
+<button class="option" id="boxA" onclick="Boxa()"><b>Black tea</b><br><br>A box of plain black tea</button>
+<button class="option" id="boxB" onclick="Boxb()"><b>Rooibos tea</b><br><br>A box of rooibos tea</button>
+<button class="option" id="boxC" onclick="Boxc()"><b>Tumeric tea</b><br><br>A box of tumeric tea</button>
+<button class="option" id="boxD" onclick="Boxd()"><b>Green tea</b><br><br>A box of $50 green tea</button>
+<br><br>
+Choose your teacup.<br><br>
+<button class="option" id="cupA" onclick="Cupa()"><b>Default teacup</b><br><br>A plain grey teacup</button>
+<button class="option" id="cupB" onclick="Cupb()"><b>Red teacup</b><br><br>A bright red teacup</button>
+<button class="option" id="cupC" onclick="Cupc()"><b>Golden teacup</b><br><br>It might be solid gold</button>
+<button class="option" id="cupD" onclick="Cupd()"><b>Emerald teacup</b><br><br>A very green teacup</button>
+<br><br>
+<button class="option" onclick="seguir()" id="go">Brew tea</button>
+</p>
+</div>
+
+<button class="icon" id="brew" onmouseover="brewHover()" onmouseout="brewUnhover()" onclick="closeT()"><span class="material-icons" style="font-size:30px;">close</span></button>
+<p id="brewbanner">Return to homepage</p>
+
+<script>
+var brewbanner = document.getElementById("brewbanner");
+function brewHover() {
+brewbanner.style.visibility = "visible";
+}
+function brewUnhover() {
+brewbanner.style.visibility = "hidden";
+}
+function closeT() {
+location.replace("game");
+}
+function Pota() {
+var first = "teapot=img/teapot.svg";
+document.getElementById("potA").style.background = "#5765f2";
+document.getElementById("potB").style.background = "#282828";
+document.getElementById("potC").style.background = "#282828";
+document.getElementById("potD").style.background = "#282828";
+}
+function Potb() {
+var first = "teapot=img/teapot-red.svg";
+document.getElementById("potA").style.background = "#282828";
+document.getElementById("potB").style.background = "#5765f2";
+document.getElementById("potC").style.background = "#282828";
+document.getElementById("potD").style.background = "#282828";
+}
+function Potc() {
+var first = "teapot=img/teapot-golden.svg";
+document.getElementById("potA").style.background = "#282828";
+document.getElementById("potB").style.background = "#282828";
+document.getElementById("potC").style.background = "#5765f2";
+document.getElementById("potD").style.background = "#282828";
+}
+function Potd() {
+var first = "teapot=img/teapot-emerald.svg";
+document.getElementById("potA").style.background = "#282828";
+document.getElementById("potB").style.background = "#282828";
+document.getElementById("potC").style.background = "#282828";
+document.getElementById("potD").style.background = "#5765f2";
+}
+function Boxa() {
+var second = "box=img/box.svg";
+document.getElementById("boxA").style.background = "#5765f2";
+document.getElementById("boxB").style.background = "#282828";
+document.getElementById("boxC").style.background = "#282828";
+document.getElementById("boxD").style.background = "#282828";
+}
+function Boxb() {
+var second = "box=img/box-red.svg";
+document.getElementById("boxA").style.background = "#282828";
+document.getElementById("boxB").style.background = "#5765f2";
+document.getElementById("boxC").style.background = "#282828";
+document.getElementById("boxD").style.background = "#282828";
+}
+function Boxc() {
+var second = "box=img/box-yellow.svg";
+document.getElementById("boxA").style.background = "#282828";
+document.getElementById("boxB").style.background = "#282828";
+document.getElementById("boxC").style.background = "#5765f2";
+document.getElementById("boxD").style.background = "#282828";
+}
+function Boxd() {
+var second = "box=img/grntea.svg";
+document.getElementById("boxA").style.background = "#282828";
+document.getElementById("boxB").style.background = "#282828";
+document.getElementById("boxC").style.background = "#282828";
+document.getElementById("boxD").style.background = "#5765f2";
+}
+function Cupa() {
+var third = "cup=img/cup.svg";
+document.getElementById("cupA").style.background = "#5765f2";
+document.getElementById("cupB").style.background = "#282828";
+document.getElementById("cupC").style.background = "#282828";
+document.getElementById("cupD").style.background = "#282828";
+}
+function Cupb() {
+var third = "cup=img/cup-red.svg";
+document.getElementById("cupA").style.background = "#282828";
+document.getElementById("cupB").style.background = "#5765f2";
+document.getElementById("cupC").style.background = "#282828";
+document.getElementById("cupD").style.background = "#282828";
+}
+function Cupc() {
+var third = "cup=img/cup-yellow.svg";
+document.getElementById("cupA").style.background = "#282828";
+document.getElementById("cupB").style.background = "#282828";
+document.getElementById("cupC").style.background = "#5765f2";
+document.getElementById("cupD").style.background = "#282828";
+}
+function Cupd() {
+var third = "cup=img/greencup.svg";
+document.getElementById("cupA").style.background = "#282828";
+document.getElementById("cupB").style.background = "#282828";
+document.getElementById("cupC").style.background = "#282828";
+document.getElementById("cupD").style.background = "#5765f2";
+}
+function seguir() {
+var url = "https://lb123658.github.io/tea/animation?" + first + "&" + second + "&" + third;
+location.replace(url);
+}
+</script>
+</body>
+</html>
