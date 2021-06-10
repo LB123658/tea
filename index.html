@@ -1,5 +1,97 @@
-<title>TeaBag: turn on JavaScript</title>
-<script>
-  location.replace("login");
-</script>
-<noscript>Please turn on JavaScript to play TeaBag</noscript>
+<!DOCTYPE html>
+<html>
+<head>
+<title id="t">TeaBag - brewing virtual tea</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+}
+#logo {
+position: absolute;
+top: 20px;
+left: 20px;
+width: 200px;
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 30px;
+font-weight: bold;
+color: white;
+cursor: default;
+}
+#logo:hover {
+border-radius: 7px;
+}
+#tea {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 100%;
+user-select: none;
+z-index: -1;
+max-height: 650px;
+}
+#text {
+font-size: 25px;
+text-align: center;
+width: 500px;
+position: absolute;
+top: 100px;
+left: 50%;
+margin-left: -250px;
+animation-name: slide;
+animation-duration: 1.5s;
+animation-iteration-count: 1;
+}
+#big {
+font-size: 50px;
+}
+@keyframes slide {
+0% {transform: translate(0px, 80px); opacity: 0.0;}
+  100% {transform: translate(0px, 0px); opacity: 1;}
+}
+.b {
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 25px;
+font-weight: bold;
+color: white;
+cursor: default;
+padding-left: 15px;
+padding-right: 15px;
+}
+.b:hover {
+border-radius: 7px;
+}
+#in {
+position: absolute;
+top: 20px;
+right: 20px;
+}
+@media screen and (max-width: 580px) {
+  #text {
+    width: 400px;
+    margin-left: -200px;
+    font-size: 22px;
+  }
+}
+</style>
+<body>
+<button id="logo" onclick="location.reload();">TeaBag</button>
+<img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
+<p id="text"><span id="big">TeaBag</span><br><br>The free online game that brings virtual tea to your computer. Brew virtual tea, buy new teapots, cups, and tea varieties, while collecting points and money.<br><br>Get started today for free by creating an account.<br><br><a href="account"><button class="b">Get started for free</button></a></p>
+<a href="login">
+<button id="in" class="b">Sign in</button></a>
+</body>
+</html>
