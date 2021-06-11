@@ -485,6 +485,19 @@ document.getElementById("version").style.visibility = "hidden";
 function prompt() {
   location.replace("prompt");
 }
+// for store reload 
+if (window.location.search == "?page=store") {
+  homediv.style.visibility = "hidden";
+  teasdiv.style.visibility = "visible";
+  moneydiv.style.visibility = "hidden";
+  accountdiv.style.visibility = "hidden";
+  settingsdiv.style.visibility = "hidden";
+  one.style.background = "#2f3137";
+  two.style.background = "#5765F2";
+  three.style.background = "#2f3137";
+  four.style.background = "#2f3137";
+  five.style.background = "#2f3137";
+}
 </script>
 <!-- Experiment -->
 <script src="finances.js"></script>
