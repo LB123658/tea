@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="t">TeaBag - verify account</title>
+<!-- © Logan Brown -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+}
+#logo {
+position: absolute;
+top: 20px;
+left: 20px;
+width: 200px;
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 30px;
+font-weight: bold;
+color: white;
+cursor: default;
+}
+#logo:hover {
+border-radius: 7px;
+}
+#tea {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 100%;
+user-select: none;
+z-index: -1;
+max-height: 650px;
+}
+#text {
+font-size: 25px;
+text-align: center;
+width: 500px;
+position: absolute;
+top: 100px;
+left: 50%;
+margin-left: -250px;
+animation-name: slide;
+animation-duration: 1.5s;
+animation-iteration-count: 1;
+}
+#big {
+font-size: 40px;
+}
+@keyframes slide {
+0% {transform: translate(0px, 80px); opacity: 0.0;}
+  100% {transform: translate(0px, 0px); opacity: 1;}
+}
+.b {
+height: 50px;
+border-radius: 15px;
+background: #5765F2;
+border: none;
+font-size: 25px;
+font-weight: bold;
+color: white;
+cursor: default;
+padding-left: 15px;
+padding-right: 15px;
+}
+.b:hover {
+border-radius: 7px;
+}
+.input {
+width: 350px;
+height: 35px;
+font-size: 22px;
+background: transparent;
+border-style: solid;
+border-color: #2F3137 #2F3137 grey #2F3137;
+margin-top: 40px;
+}
+.input:focus {
+outline-width: 0;
+border-color: #2F3137 #2F3137 white #2F3137;
+}
+#
+</style>
+<body>
+<button id="logo" onclick="location.reload();">TeaBag</button>
+<img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
+<p id="text"><span id="big">Verify your account</span>
+<input type="text" autocomplete="off" class="input" placeholder="Enter your username" id="username">
+<br>
+<input type="password" autocomplete="off" class="input" placeholder="Enter your password" id="password"></p>
+
+<script>
+document.getElementById("username").focus();
+</script>
+</body>
+</html>
