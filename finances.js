@@ -212,6 +212,7 @@ function buypotB() {
   potbprice.innerHTML = "Owned";
   potB.removeEventListener("click", buypotB);
   potB.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buypotC() {
   localStorage.setItem("Potc", "1");
@@ -221,6 +222,7 @@ function buypotC() {
   potcprice.innerHTML = "Owned";
   potC.removeEventListener("click", buypotC);
   potC.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buypotD() {
   localStorage.setItem("Potd", "1");
@@ -230,6 +232,7 @@ function buypotD() {
   potdprice.innerHTML = "Owned";
   potD.removeEventListener("click", buypotD);
   potD.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buyboxA() {
   localStorage.setItem("Boxa", "1");
@@ -247,6 +250,7 @@ function buyboxB() {
   boxbprice.innerHTML = "Owned";
   boxB.removeEventListener("click", buyboxB);
   boxB.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buyboxC() {
   localStorage.setItem("Boxc", "1");
@@ -256,6 +260,7 @@ function buyboxC() {
   boxcprice.innerHTML = "Owned";
   boxC.removeEventListener("click", buyboxC);
   boxC.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buyboxD() {
   localStorage.setItem("Boxd", "1");
@@ -265,6 +270,7 @@ function buyboxD() {
   boxdprice.innerHTML = "Owned";
   boxD.removeEventListener("click", buyboxD);
   boxD.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buycupA() {
   localStorage.setItem("Cupa", "1");
@@ -282,6 +288,7 @@ function buycupB() {
   cupbprice.innerHTML = "Owned";
   cupB.removeEventListener("click", buycupB);
   cupB.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buycupC() {
   localStorage.setItem("Cupc", "1");
@@ -291,6 +298,7 @@ function buycupC() {
   cupcprice.innerHTML = "Owned";
   cupC.removeEventListener("click", buycupC);
   cupC.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 function buycupD() {
   localStorage.setItem("Cupd", "1");
@@ -300,6 +308,7 @@ function buycupD() {
   cupdprice.innerHTML = "Owned";
   cupD.removeEventListener("click", buycupD);
   cupD.style.pointerEvents = "none";
+  window.location.search = "?page=store";
 }
 
 if (Pota == 1) {
