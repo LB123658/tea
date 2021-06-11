@@ -277,7 +277,7 @@ border-radius: 7px;
 </head>
 <body>
 <div id="top">
-  <button id="logo" onclick="location.reload()">TeaBag</button>
+  <button id="logo" onclick="reloadpage()">TeaBag</button>
   <p id="p">Brewing virtual tea.</p>
 </div>
 
@@ -497,6 +497,9 @@ if (window.location.search == "?page=store") {
   three.style.background = "#2f3137";
   four.style.background = "#2f3137";
   five.style.background = "#2f3137";
+}
+function reloadpage() {
+location.replace("game");
 }
 </script>
 <!-- Experiment -->
