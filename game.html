@@ -389,7 +389,7 @@ brewbanner.style.visibility = "hidden";
 //load account info page 
 document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are playing the first version of TeaBag. You will be notified when there are updates.<br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
 // load specialized account info
-if (localStorage.getItem("points") > 750) {  
+if (localStorage.getItem("points") > 700) {  
 document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are now officially a master tea brewer! You have been making a lot of tea lately. <br><br> You can now verify your account so you can reset your password and recover your account if it is lost. <br><br><a href='verify' target='_blank'><button class='b'>Verify account</button></a> <br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
 }
 //load personallized homepage
