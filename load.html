@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="t">Loading TeaBag...</title>
+<!-- © Logan Brown -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<style>
+body {
+background: #2F3137;
+}
+* {
+font-family: 'Montserrat', sans-serif;
+user-select: none;
+color: white;
+}
+#tea {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 100%;
+user-select: none;
+z-index: -1;
+max-height: 650px;
+}
+#text {
+font-size: 25px;
+text-align: center;
+width: 500px;
+position: absolute;
+top: 200px;
+left: 50%;
+margin-left: -250px;
+animation-name: slide;
+animation-duration: 1.5s;
+animation-iteration-count: 1;
+}
+#big {
+font-size: 50px;
+}
+@keyframes slide {
+0% {transform: translate(0px, 80px); opacity: 0.0;}
+  100% {transform: translate(0px, 0px); opacity: 1;}
+}
+#loader {
+position: absolute;
+top: 350px;
+height: 30px;
+left: 10%;
+width: 80%;
+background: lightgrey;
+animation-name: loading;
+animation-duration: 1.8s;
+animation-iteration-count: 1;
+}
+@keyframes loading {
+0% {width: 0%;}
+100% {width: 80%;}
+}
+</style>
+<body onload="setTimeout(load, 2000)">
+<img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
+<p id="text"><span id="big">Loading...</span></p>
+
+<div id="loader">
+</div>
+
+<script>
+function load() {
+location.replace("game");
+}
+</script>
+</body>
+</html>
