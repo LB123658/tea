@@ -138,6 +138,33 @@ background: #5765F2;
  65% {top: 10%; left: 25%; transform: rotate(-30deg);}
  70% {transform: rotate(10deg); top: 10%; left: 30%;}
 }
+
+#loader {
+position: absolute;
+bottom: 50px;
+height: 30px;
+left: 18%;
+width: 64%;
+background: lightgrey;
+animation-name: loading;
+animation-duration: 45s;
+animation-iteration-count: 1;
+color: #282828;
+taxt-align: left;
+}
+#greyload {
+position: absolute;
+bottom: 50px;
+height: 30px;
+left: 18%;
+width: 64%;
+background: #484848;
+z-index: -1;
+}
+@keyframes loading {
+0% {width: 0%;}
+100% {width: 60%;}
+}
 </style>
 </head>
 <body onload="setTimeout(finish, 45000)">
@@ -156,6 +183,10 @@ background: #5765F2;
 <button class="icon" id="brew" onmouseover="brewHover()" onmouseout="brewUnhover()" onclick="closetea()"><span class="material-icons" style="font-size:30px;">close</span></button>
 <p id="brewbanner">Stop making tea</p>
 
+<div id="loader" title="Brewing in progress...">
+</div>
+<div id="greyload" title="Brewing left...">
+</div>
 <script>
 function finish() {
 document.getElementById("status").innerHTML = "Your tea is ready!";
@@ -164,6 +195,8 @@ var money = localStorage.getItem("money");
 localStorage.setItem("money", +money + 5);
 var points = localStorage.getItem("points");
 localStorage.setItem("points", +points + 10);
+brewbanner.style.visibility = "visible";
+brewbanner.innerHTML = "Close and claim rewards";
 }
 
 var brewbanner = document.getElementById("brewbanner");
