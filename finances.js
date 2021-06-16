@@ -371,3 +371,42 @@ if (Cupd == 1) {
   cupD.removeEventListener("click", buycupD);
   cupD.style.pointerEvents = "none";
 } 
+if (points == 700) {
+  localStorage.setItem("Boxb", "0");
+}
+if (points == 710) {
+  localStorage.setItem("Boxc", "0");
+}
+if (points == 730) {
+  localStorage.setItem("Boxd", "0");
+}
+if (points == 750) {
+  localStorage.setItem("Boxa", "0");
+}
+if (points == 770) {
+  localStorage.setItem("Boxb", "0");
+}
+if (points == 790) {
+  localStorage.setItem("Boxc", "0");
+}
+if (points == 810) {
+  localStorage.setItem("Boxd", "0");
+}
+if (points == 830) {
+  localStorage.setItem("Boxa", "0");
+}
+if (points == 850) {
+  localStorage.setItem("Boxb", "0");
+}
+if (points == 880) {
+  localStorage.setItem("Boxc", "0");
+}
+if (points == 900) {
+  localStorage.setItem("Boxd", "0");
+}
+if (points == 1000) {
+  localStorage.setItem("Boxa", "0");
+  localStorage.setItem("Boxb", "0");
+  localStorage.setItem("Boxc", "0");
+  localStorage.setItem("Boxd", "0");
+}
