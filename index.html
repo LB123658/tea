@@ -6,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <link rel='icon' href='https://lb123658.github.io/tea/img/favicon.png' type='image/png'/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 <style>
 body {
 background: #2F3137;
@@ -81,19 +82,48 @@ position: absolute;
 top: 20px;
 right: 20px;
 }
-@media screen and (max-width: 580px) {
+#app {
+position: absolute;
+top: 20px;
+right: 150px;
+}
+a {
+text-decoration: none;
+background: #585858;
+}
+a:hover {
+text-decoration: underline;
+}
+@media screen and (max-width: 570px) {
   #text {
     width: 400px;
     margin-left: -200px;
     font-size: 22px;
+  }
+  #app {
+    visibility: hidden;
   }
 }
 </style>
 <body>
 <button id="logo" onclick="location.reload();">TeaBag</button>
 <img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
-<p id="text"><span id="big">TeaBag</span><br><br>The free online game that brings virtual tea to your computer. Brew virtual tea, buy new teapots, cups, and tea varieties, while collecting points and money.<br><br>Get started today for free by creating an account.<br><br><a href="account"><button class="b">Get started for free</button></a></p>
+<p id="text"><span id="big">TeaBag</span><br><br><span id="info">The free online game that brings virtual tea to your computer. Brew virtual tea, buy new teapots, cups, and tea varieties, while collecting points and money.<br><br>Get started today for free by creating an account.<br><br><a href="account"><button class="b">Get started for free</button></a></span></p>
+
+<a href="https://github.com/LB123658/teabag-mac-app/archive/refs/heads/main.zip">
+<button id="app" class="b" onclick="downloadApp()" title="Download TeaBag app"> Download</button></a>
+
 <a href="login">
 <button id="in" class="b">Sign in</button></a>
+
+<script>
+function downloadApp() {
+document.getElementById("big").innerHTML = "TeaBag Mac app";
+document.getElementById("info").innerHTML = "If you are unable to open the app, allow apps from unknown developers to be opened by changing the settings in system preferences. Once you can open the app, move it to the applications folder.<br><br>If it did not download, click <a href='https://github.com/LB123658/teabag-mac-app/archive/refs/heads/main.zip'>here</a> to try again.";
+document.getElementById("app").style.opacity = "0.7";
+document.getElementById("app").style.pointerEvents = "none";
+document.getElementById("t").innerHTML = "Downloading TeaBag app";
+}
+</script>
 </body>
 </html>
