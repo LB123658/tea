@@ -390,8 +390,8 @@ brewbanner.style.visibility = "hidden";
 //load account info page 
 document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are playing the first version of TeaBag. You will be notified when there are updates.<br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
 // load specialized account info
-if (localStorage.getItem("points") > 700) {  
-document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are now officially a master tea brewer! You have been making a lot of tea lately. <br><br> You can now verify your account so you can reset your password and recover your account if it is lost. <br><br><a href='verify' target='_blank'><button class='b'>Verify account</button></a> <br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
+if (localStorage.getItem("points") > 100) {  
+document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are now officially a virtual tea brewer! You have been making a lot of tea lately. <br><br> You can have unlocked the feature where you can reset your password and username. <br><br><a href='verify' target='_blank'><button class='b'>Account settings</button></a> <br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
 }
 //load personallized homepage
 document.getElementById("homescreentext").innerHTML = "Welcome to TeaBag, " + localStorage.getItem("account").split(":")[0] + "! <br><br> Your score is: <span id='score'></span> <br><br> TeaBag is now available!<br><br>How to play:<br>The buttons on the left show all the pages to manage your money, buy new tea supplies, and keep track of your account. To start, buy the free items in the store and you can brew your first virtual cup of tea!";
@@ -479,7 +479,7 @@ document.body.style.opacity = "0.7";
 document.body.style.pointerEvents = "none";
 document.getElementById("version").style.visibility = "visible";
 document.getElementById("version").style.pointerEvents = "auto";
-document.getElementById("versiontext").innerHTML = "Your TeaBag account:<br>" + localStorage.getItem("account").split(":")[0] + "<br><br>TeaBag last updated:<br> June 16, 2021<br><br><button id='closeApp' onclick='hideabout()'>Close</button>";
+document.getElementById("versiontext").innerHTML = "Your TeaBag account:<br>" + localStorage.getItem("account").split(":")[0] + "<br><br>TeaBag last updated:<br> June 19, 2021<br><br><button id='closeApp' onclick='hideabout()'>Close</button>";
 }
 function hideabout() {
 document.body.style.opacity = "1";
