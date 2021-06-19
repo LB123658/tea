@@ -346,7 +346,7 @@ Tea cups
 
 <!-- about app section -->
 <div id="version">
-<p id="versiontext">TeaBag (first release)<br><br>Last updated June 11, 2021<br><br><button id="closeApp" onclick="hideabout()">Close</button></p>
+<p id="versiontext">TeaBag (first release)<br><br>Last updated June 19, 2021<br><br><button id="closeApp" onclick="hideabout()">Close</button></p>
 </div>
 <script>
 var banner = document.getElementById("banner");
@@ -391,7 +391,7 @@ brewbanner.style.visibility = "hidden";
 document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are playing the first version of TeaBag. You will be notified when there are updates.<br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
 // load specialized account info
 if (localStorage.getItem("points") > 100) {  
-document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are now officially a virtual tea brewer! You have been making a lot of tea lately. <br><br> You can have unlocked the feature where you can reset your password and username. <br><br><a href='verify' target='_blank'><button class='b'>Account settings</button></a> <br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
+document.getElementById("accountInfo").innerHTML = "Hello, " + localStorage.getItem("account").split(":")[0] + "! <br><br> You are now officially a virtual tea brewer! You have been making a lot of tea lately. <br><br> You can have unlocked the feature where you can reset your password. <br><br><a href='reset' target='_blank'><button class='b'>Reset password</button></a> <br><br> <a href='signed-out'><button id='signout'>Sign out</button></a>";
 }
 //load personallized homepage
 document.getElementById("homescreentext").innerHTML = "Welcome to TeaBag, " + localStorage.getItem("account").split(":")[0] + "! <br><br> Your score is: <span id='score'></span> <br><br> TeaBag is now available!<br><br>How to play:<br>The buttons on the left show all the pages to manage your money, buy new tea supplies, and keep track of your account. To start, buy the free items in the store and you can brew your first virtual cup of tea!";
