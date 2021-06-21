@@ -124,6 +124,12 @@ document.getElementById("app").style.opacity = "0.7";
 document.getElementById("app").style.pointerEvents = "none";
 document.getElementById("t").innerHTML = "Downloading TeaBag app";
 }
+// hide download app button if computer is not mac
+if (navigator.platform.slice(0, 3) == "Mac") {
+  document.getElementById("app").style.visibility = "visible";
+} else {
+  document.getElementById("app").remove();
+}
 </script>
 </body>
 </html>
