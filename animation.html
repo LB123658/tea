@@ -198,20 +198,19 @@ function finish() {
 document.getElementById("status").innerHTML = "Your tea is ready!";
 document.getElementById("reward").style.visibility = "visible";
 
-if (document.getElementById("teapot").src == "img/teapot-emerald.svg") {
- var money = localStorage.getItem("money");
- localStorage.setItem("money", +money + 10);
- var points = localStorage.getItem("points");
+var money = localStorage.getItem("money");
+var points = localStorage.getItem("points");
+ 
+if (document.getElementById("teapot").src == "https://lb123658.github.io/tea/img/teapot-emerald.svg") {
+ localStorage.setItem("money", +money + 20);
  localStorage.setItem("points", +points + 10);
  brewbanner.style.visibility = "visible";
  brewbanner.innerHTML = "Close and claim rewards";
- document.getElementById("rewardAmount").innerHTML = "10.00";
+ document.getElementById("rewardAmount").innerHTML = "20.00";
 }
  
 else {
-var money = localStorage.getItem("money");
 localStorage.setItem("money", +money + 5);
-var points = localStorage.getItem("points");
 localStorage.setItem("points", +points + 10);
 brewbanner.style.visibility = "visible";
 brewbanner.innerHTML = "Close and claim rewards";
