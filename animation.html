@@ -202,14 +202,42 @@ var money = localStorage.getItem("money");
 var points = localStorage.getItem("points");
  
 if (document.getElementById("teapot").src == "https://lb123658.github.io/tea/img/teapot-emerald.svg") {
- localStorage.setItem("money", +money + 20);
+ localStorage.setItem("money", +money + 15);
  localStorage.setItem("points", +points + 10);
  brewbanner.style.visibility = "visible";
  brewbanner.innerHTML = "Close and claim rewards";
- document.getElementById("rewardAmount").innerHTML = "20.00";
-}
- 
-else {
+ document.getElementById("rewardAmount").innerHTML = "15.00";
+} else if (document.getElementById("box").src == "https://lb123658.github.io/tea/img/grntea.svg") {
+ localStorage.setItem("money", +money + 15);
+ localStorage.setItem("points", +points + 10);
+ brewbanner.style.visibility = "visible";
+ brewbanner.innerHTML = "Close and claim rewards";
+ document.getElementById("rewardAmount").innerHTML = "15.00";
+} else if (document.getElementById("cup").src == "https://lb123658.github.io/tea/img/greencup.svg") {
+ localStorage.setItem("money", +money + 15);
+ localStorage.setItem("points", +points + 10);
+ brewbanner.style.visibility = "visible";
+ brewbanner.innerHTML = "Close and claim rewards";
+ document.getElementById("rewardAmount").innerHTML = "15.00";
+} else if (document.getElementById("teapot").src == "https://lb123658.github.io/tea/img/teapot-golden.svg") {
+ localStorage.setItem("money", +money + 10);
+ localStorage.setItem("points", +points + 10);
+ brewbanner.style.visibility = "visible";
+ brewbanner.innerHTML = "Close and claim rewards";
+ document.getElementById("rewardAmount").innerHTML = "10.00";
+} else if (document.getElementById("box").src == "https://lb123658.github.io/tea/img/box-yellow.svg") {
+ localStorage.setItem("money", +money + 10);
+ localStorage.setItem("points", +points + 10);
+ brewbanner.style.visibility = "visible";
+ brewbanner.innerHTML = "Close and claim rewards";
+ document.getElementById("rewardAmount").innerHTML = "10.00";
+} else if (document.getElementById("cup").src == "https://lb123658.github.io/tea/img/cup-yellow.svg") {
+ localStorage.setItem("money", +money + 10);
+ localStorage.setItem("points", +points + 10);
+ brewbanner.style.visibility = "visible";
+ brewbanner.innerHTML = "Close and claim rewards";
+ document.getElementById("rewardAmount").innerHTML = "10.00";
+} else {
 localStorage.setItem("money", +money + 5);
 localStorage.setItem("points", +points + 10);
 brewbanner.style.visibility = "visible";
