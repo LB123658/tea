@@ -105,7 +105,7 @@ text-decoration: underline;
   }
 }
 </style>
-<body onload="setInterval(offline, 1000)">
+<body>
 <button id="logo" onclick="location.reload();">TeaBag</button>
 <img src="https://raw.githubusercontent.com/LB123658/tea/main/img/login.png" id="tea">
 <p id="text"><span id="big">TeaBag</span><br><br><span id="info">The free online game that brings virtual tea to your computer. Brew virtual tea, buy new teapots, cups, and tea varieties, while collecting points and money.<br><br>Get started today for free by creating an account.<br><br><a href="account"><button class="b">Get started for free</button></a></span></p>
@@ -129,13 +129,6 @@ if (navigator.platform.slice(0, 3) == "Mac") {
   document.getElementById("app").style.visibility = "visible";
 } else {
   document.getElementById("app").remove();
-}
-function offline() {
-  if (navigator.onLine = "false") {
-  document.getElementById("info").innerHTML = "The TeaBag website does not work if you are offline. Try connecting to Wi-Fi.";
-  } else {
-    ;
-  }
 }
 </script>
 </body>
