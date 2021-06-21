@@ -178,7 +178,7 @@ z-index: -1;
 </audio>
 
 <div id="reward">
-<p>You have recieved $5.00</p>
+ <p>You have recieved $<span id="rewardAmount">5.00</span></p>
 </div>
  
 <button class="icon" id="brew" onmouseover="brewHover()" onmouseout="brewUnhover()" onclick="closetea()"><span class="material-icons" style="font-size:30px;">close</span></button>
@@ -198,6 +198,11 @@ var points = localStorage.getItem("points");
 localStorage.setItem("points", +points + 10);
 brewbanner.style.visibility = "visible";
 brewbanner.innerHTML = "Close and claim rewards";
+if (document.getElementById("teapot").src == "img/teapot-emerald.svg") {
+ localStorage.setItem("money", +money + 10);
+ localStorage.setItem("points", +points + 10);
+ document.getElementById("rewardAmount").innerHTML = "10.00");
+}
 }
 
 var brewbanner = document.getElementById("brewbanner");
