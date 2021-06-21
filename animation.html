@@ -189,6 +189,11 @@ z-index: -1;
 <div id="greyload" title="Brewing left...">
 </div>
 <script>
+//change teapot colors
+document.getElementById("teapot").src = location.search.split("=")[1].split("&")[0];
+document.getElementById("box").src = location.search.split("&")[1].split("=")[1];
+document.getElementById("cup").src = location.search.split("=")[3];
+ 
 function finish() {
 document.getElementById("status").innerHTML = "Your tea is ready!";
 document.getElementById("reward").style.visibility = "visible";
@@ -216,10 +221,6 @@ brewbanner.style.visibility = "visible";
 function brewUnhover() {
 brewbanner.style.visibility = "hidden";
 }
-//change teapot colors
-document.getElementById("teapot").src = location.search.split("=")[1].split("&")[0];
-document.getElementById("box").src = location.search.split("&")[1].split("=")[1];
-document.getElementById("cup").src = location.search.split("=")[3];
 
 function closetea() {
 location.replace("game");
